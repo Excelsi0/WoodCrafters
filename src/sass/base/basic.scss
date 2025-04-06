@@ -36,3 +36,17 @@ html {
     font-family: "Manrope", sans-serif;
     scroll-behavior: smooth;
 }
+
+// Reset link styles
+a {
+    text-decoration: none;
+    color: $light;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:visited {
+        color: $light;
+        text-decoration: none;
+    }
+}

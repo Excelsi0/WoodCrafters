@@ -14,9 +14,14 @@
     }
 }
 
-// Алиас для desktop-first подхода (как использовали раньше)
 @mixin breakpoint($point) {
     @include breakpoint-down($point) {
+        @content;
+    }
+}
+
+@mixin not-hover-mobile {
+    @media (hover: hover) and (pointer: fine) {
         @content;
     }
 }
