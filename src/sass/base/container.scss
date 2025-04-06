@@ -1,0 +1,16 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+/* Container
+   ========================================================================== */
+
+.container {
+    width: 100%;
+    padding: 0 $container-padding;
+    margin: 0 auto;
+    max-width: $container-max-width;
+
+    @include breakpoint(tablet) {
+        padding: 0 $container-padding-tablet;
+    }
+}

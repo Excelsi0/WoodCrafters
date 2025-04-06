@@ -1,0 +1,22 @@
+@use "sass:map";
+@use "variables" as *;
+
+// Media queries
+@mixin breakpoint-up($point) {
+    @media (min-width: map.get($breakpoints, $point)) {
+        @content;
+    }
+}
+
+@mixin breakpoint-down($point) {
+    @media (max-width: map.get($breakpoints, $point)) {
+        @content;
+    }
+}
+
+// Алиас для desktop-first подхода (как использовали раньше)
+@mixin breakpoint($point) {
+    @include breakpoint-down($point) {
+        @content;
+    }
+}

@@ -1,0 +1,14 @@
+@use "/src/sass/libs/modern-normalize.min.css";
+
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/basic.scss";
+@use "/src/sass/base/container.scss";
+
+@use "/src/sass/blocks/logo.scss";
+@use "/src/sass/blocks/nav.scss";
+@use "/src/sass/blocks/hero.scss";
+@use "/src/sass/blocks/titles.scss";
+@use "/src/sass/blocks/btn.scss";
+html {
+    background-color: $graphite;
+}

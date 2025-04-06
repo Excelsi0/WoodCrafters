@@ -1,0 +1,25 @@
+$light: #fff;
+$graphite: #1b1f24;
+$graphite-light: #212a2e;
+
+// Typography
+$font-primary: "Inter", sans-serif;
+$font-heading: "Playfair Display", serif;
+
+// Breakpoints
+$breakpoints: (
+    mobile: 375px,
+    // iPhone SE, маленькие телефоны
+    mobile-lg: 576px,
+    // Большие телефоны
+    tablet: 768px,
+    // iPad mini, планшеты
+    tablet-lg: 1024px,
+    // iPad Air, большие планшеты
+    desktop: 1200px, // Стандартная десктопная ширина
+);
+
+// Container
+$container-max-width: 1200px;
+$container-padding: 20px;
+$container-padding-tablet: 15px;

@@ -1,0 +1,56 @@
+@use "/src/sass/base/variables" as *;
+@use "/src/sass/base/mixins" as *;
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 0 0;
+
+    &__link {
+        font-weight: 700;
+        font-size: 20px;
+        color: #f5f5f5;
+    }
+    &__right {
+        padding-top: 20px;
+        display: flex;
+        column-gap: 65px;
+    }
+}
+
+@include breakpoint(tablet-lg) {
+    .nav {
+        padding: 30px 0 0;
+        &__link {
+            font-size: 15px;
+        }
+        &__right {
+            column-gap: 30px;
+        }
+    }
+}
+
+@include breakpoint(tablet) {
+    .nav {
+        &__link {
+            font-size: 12px;
+        }
+        &__right {
+            column-gap: 15px;
+        }
+    }
+}
+
+@include breakpoint(mobile-lg) {
+    .nav {
+        padding-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+
+        &__link {
+            font-size: 14px;
+        }
+    }
+}

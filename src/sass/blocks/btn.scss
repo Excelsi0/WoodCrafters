@@ -1,0 +1,23 @@
+@use "/src/sass/base/variables" as *;
+@use "/src/sass/base/mixins" as *;
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+
+    background-color: $graphite-light;
+    box-shadow: 0 0 30px 20px #0000002d;
+    border-radius: 5px;
+
+    color: $light;
+    font-weight: 300;
+    font-size: 28px;
+}
+
+@include breakpoint(tablet-lg) {
+    .btn {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,66 @@
+@use "/src/sass/base/variables" as *;
+@use "/src/sass/base/mixins" as *;
+
+@keyframes neon {
+    from {
+        text-shadow: 0 0 10px #000;
+    }
+    to {
+        text-shadow: 0 0 20px #fff;
+    }
+}
+
+.logo {
+    text-decoration: none;
+    max-width: 465px;
+
+    &__border {
+        margin: 0;
+        display: block;
+        max-width: 465px;
+        padding: 10px 30px 25px;
+        border: 2px solid #fff;
+        border-radius: 5px;
+    }
+
+    &__img {
+        margin: 0 5px;
+        width: 35px;
+        color: #fff;
+    }
+
+    &__text {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        color: $light;
+        font-size: 12px;
+        font-weight: 500;
+        font-style: normal;
+        text-transform: uppercase;
+
+        text-shadow: 0 0 10px #000;
+
+        animation: neon 2s infinite alternate;
+    }
+}
+
+@include breakpoint(tablet-lg) {
+    .logo {
+        &__text {
+            font-size: 10px;
+        }
+        &__border {
+            padding: 5px 10px 20px;
+        }
+    }
+}
+
+@include breakpoint(tablet) {
+    .logo {
+        &__text {
+            font-size: 8px;
+        }
+    }
+}
