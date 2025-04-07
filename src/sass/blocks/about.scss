@@ -2,16 +2,23 @@
 @use "/src/sass/base/mixins.scss" as *;
 
 .about {
-    padding: 150px 0;
+    padding: 150px 0 0;
 
     &__items {
+        margin: 70px auto 0;
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 100px;
         background-color: $graphite-dark;
         border-radius: 5px;
-        max-width: 85%;
-        margin: 70px auto 0;
+        width: 70vw;
+        max-width: 1000px;
+        @include breakpoint(tablet-lg) {
+            width: 100%;
+            gap: 50px;
+            padding: 30px 20px;
+        }
     }
 
     &__item {
@@ -19,6 +26,7 @@
         align-items: start;
         justify-content: center;
         position: relative;
+        flex-direction: row;
 
         &:not(:last-child)::after {
             content: "";
@@ -30,30 +38,40 @@
             height: 1px;
             background-color: $light;
         }
+        @include breakpoint(tablet-lg) {
+            &:not(:last-child)::after {
+                display: none;
+            }
+            gap: 20px;
+        }
+        @include breakpoint(mobile-lg) {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
     }
 
     &__image {
-        width: 210px;
-        height: 300px;
+        width: 210px; /* фиксированная ширина */
+        height: 300px; /* фиксированная высота */
         border-radius: 5px;
+        overflow: hidden;
+        @include breakpoint(tablet-lg) {
+            width: 35%;
+            height: 250px; /* фиксированная высота */
+        }
+        @include breakpoint(mobile-lg) {
+            width: 100%;
+            height: 250px; /* фиксированная высота */
+            order: 1;
+        }
     }
 
     &__img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: cover; /* сохраняем пропорции */
         border-radius: 5px;
         box-shadow: $box-shadow;
-    }
-
-    #about__img-1 {
-        transform: translateX(-70px) scale(1.5);
-    }
-    #about__img-2 {
-        transform: translateX(+70px) scale(1.5);
-    }
-    #about__img-3 {
-        transform: translateX(-70px) scale(1.5);
     }
 
     &__content {
@@ -63,37 +81,46 @@
         align-items: start;
         width: 70%;
         padding: 30px;
+        @include breakpoint(tablet-lg) {
+            width: 65%;
+            padding: 15px;
+        }
+        @include breakpoint(mobile-lg) {
+            width: 100%;
+            padding: 15px;
+        }
+        @include breakpoint(mobile) {
+            width: 100%;
+            padding: 15px;
+            order: 0;
+        }
     }
 
     &__title {
         font-size: 40px;
         font-weight: 500;
         color: $light;
+        @include breakpoint(tablet-lg) {
+            font-size: 32px;
+        }
+        @include breakpoint(tablet) {
+            font-size: 24px;
+        }
     }
-    #about__title-2 {
-        text-align: right;
-        align-self: end;
-    }
+
     &__text {
         margin-top: 30px;
         max-width: 700px;
         font-size: 20px;
         font-weight: 200;
         color: $light;
-    }
-    #about__text-2 {
-        text-align: right;
-        align-self: end;
-    }
-    &__button {
-        margin-top: 30px;
-        font-size: 20px;
-        font-weight: 200;
-        color: $light;
-    }
-    #about__button-2 {
-        align-self: end;
-        text-align: right;
+        @include breakpoint(tablet-lg) {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        @include breakpoint(tablet) {
+            font-size: 16px;
+        }
     }
 
     &__button {
@@ -112,5 +139,79 @@
                 transform: scale(0.99);
             }
         }
+        @include breakpoint(tablet-lg) {
+            margin-top: 50px;
+            font-size: 30px;
+        }
+        @include breakpoint(tablet) {
+            margin-top: 30px;
+            font-size: 20px;
+        }
+    }
+}
+
+.about__item:nth-child(even) {
+    .about__title,
+    .about__text,
+    .about__button {
+        text-align: right;
+        align-self: flex-end;
+    }
+
+    .about__image {
+        order: 2;
+        @include breakpoint(mobile-lg) {
+            order: 1;
+        }
+    }
+}
+
+@include breakpoint(mobile-lg) {
+    .about__item:nth-child(even) {
+        .about__title,
+        .about__text,
+        .about__button {
+            text-align: left;
+            align-self: flex-start;
+        }
+    }
+}
+
+.about__item:nth-child(even) {
+    .about__image {
+        order: 1;
+        align-self: flex-end;
+        transform: translateX(70px) scale(1.5);
+    }
+}
+.about__item:nth-child(odd) {
+    .about__image {
+        order: 0;
+        align-self: flex-end;
+        transform: translateX(-70px) scale(1.5);
+    }
+}
+
+@include breakpoint(tablet-lg) {
+    .about__item:nth-child(even) {
+        .about__image {
+            transform: translateX(0) scale(1);
+        }
+    }
+
+    .about__item:nth-child(odd) {
+        .about__image {
+            transform: translateX(0) scale(1);
+            order: 0;
+        }
+    }
+}
+
+@include breakpoint(mobile-lg) {
+    .about__content {
+        order: -1;
+    }
+    .about__image {
+        order: 1;
     }
 }
