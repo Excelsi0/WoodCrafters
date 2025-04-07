@@ -21,6 +21,6 @@
     },
     "dependencies": {
         "bootstrap": "^5.3.3",
-        "uikit": "^3.23.4"
+        "uikit": "^3.23.5"
     }
 }

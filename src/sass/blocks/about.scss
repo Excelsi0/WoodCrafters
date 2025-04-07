@@ -148,6 +148,12 @@
             font-size: 20px;
         }
     }
+    @include breakpoint(mobile-lg) {
+        padding-top: 70px;
+        &__items {
+            margin-top: 40px;
+        }
+    }
 }
 
 .about__item:nth-child(even) {
