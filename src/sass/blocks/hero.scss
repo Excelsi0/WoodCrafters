@@ -9,7 +9,7 @@
         justify-content: space-between;
         background-color: $graphite;
         border-radius: 5px;
-        box-shadow: 0 0 30px 20px #00000050;
+        box-shadow: $box-shadow;
         padding: 75px;
 
         &__left {

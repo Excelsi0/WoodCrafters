@@ -1,15 +1,6 @@
 @use "/src/sass/base/variables" as *;
 @use "/src/sass/base/mixins" as *;
 
-@keyframes neon {
-    from {
-        text-shadow: 0 0 10px #000;
-    }
-    to {
-        text-shadow: 0 0 20px #fff;
-    }
-}
-
 .logo {
     text-decoration: none;
     max-width: 465px;

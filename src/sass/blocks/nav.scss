@@ -24,7 +24,7 @@
     @include not-hover-mobile {
         .nav__link {
             &:hover {
-                text-shadow: 0 0 5px $light;
+                text-shadow: 0 0 10px $light-hover;
                 transform: scale(1.1);
             }
         }

@@ -11,6 +11,12 @@
         font-weight: 500;
         line-height: 1.1;
     }
+    &-h2 {
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 1.1;
+        text-align: center;
+    }
 }
 
 @include breakpoint(tablet-lg) {
