@@ -18,6 +18,7 @@ import "/src/sass/style.scss";
 
 // Маска для телефона
 import Inputmask from "inputmask";
+import "/src/fontello/css/fontello.css";
 
 // ловим ошибки
 try {

@@ -55,9 +55,9 @@
                         </div>
                         <div class="nav__right">
                             <a href="#" class="nav__link">Главная</a>
-                            <a href="#" class="nav__link">О нас</a>
-                            <a href="#" class="nav__link">Каталог</a>
-                            <a href="#" class="nav__link">Контакты</a>
+                            <a href="#about" class="nav__link">О нас</a>
+                            <a href="#gallery" class="nav__link">Галерея</a>
+                            <a href="#contacts" class="nav__link">Контакты</a>
                         </div>
                     </nav>
 
@@ -110,7 +110,7 @@
 
             <section class="about">
                 <div class="container">
-                    <h2 class="title title-h2">О нас</h2>
+                    <h2 class="title title-h2" id="about">О нас</h2>
                     <div class="about__items">
                         <div class="about__item">
                             <div class="about__image" id="about__img-1">
@@ -182,7 +182,7 @@
                 </div>
             </section>
 
-            <section class="gallery">
+            <section class="gallery" id="gallery">
                 <div class="container">
                     <h2 class="title title-h2">Наши работы</h2>
                     <div class="swiper gallery__swiper">
@@ -461,7 +461,7 @@
                 </div>
             </div>
 
-            <section class="contacts">
+            <section class="contacts" id="contacts">
                 <div class="contacts__container container">
                     <div class="contacts__wrap">
                         <form class="contacts__form" action="#" method="post">
@@ -513,14 +513,50 @@
                                     <label
                                         class="contacts__label contacts__label-textarea"
                                         for="message">Комментарий
-                                        (например,
-                                        когда удобно связаться)</label>
+                                    </label>
                                 </div>
 
                                 <button class="contacts__button btn"
                                     type="submit">Отправить</button>
                             </fieldset>
                         </form>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact-links uk-section uk-text-center">
+                <div class="container">
+                    <h2 class="title title-h2">Либо напишите
+                        нам сами</h2>
+
+                    <div
+                        class="contact-links__items uk-flex uk-flex-center uk-grid-small"
+                        uk-grid>
+                        <div>
+                            <a href="https://t.me/твой_ник" target="_blank"
+                                class="contact-links__item contact-links__item--tg uk-icon-button uk-border-circle"
+                                uk-tooltip="Telegram">
+                                <i
+                                    class="icon-telegram contact-links__icon"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://wa.me/7номер" target="_blank"
+                                class="contact-links__item contact-links__item--wa uk-icon-button uk-border-circle"
+                                uk-tooltip="WhatsApp">
+                                <i
+                                    class="icon-whatsapp contact-links__icon"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://vk.com/твой_профиль"
+                                target="_blank"
+                                class="contact-links__item contact-links__item--vk uk-icon-button uk-border-circle"
+                                uk-tooltip="VK">
+                                <i
+                                    class="icon-vkontakte contact-links__icon"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -532,6 +568,7 @@
         onlyWidgets: true
       });
 </script>
+
         <script src="src/assets/uikit/uikit-core.min.js"></script>
         <script type="module" src="/src/js/script.js"></script>
     </body>

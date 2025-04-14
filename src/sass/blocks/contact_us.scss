@@ -1,0 +1,41 @@
+.contact-links {
+    &__item {
+        margin-top: 30px;
+        width: 48px;
+        height: 48px;
+        font-size: 22px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        &--tg {
+            background-color: #229ed9;
+            &:hover {
+                background-color: rgb(71, 157, 255);
+            }
+        }
+        &--wa {
+            background-color: #25d366;
+            &:hover {
+                background-color: #90ffb9;
+            }
+        }
+        &--vk {
+            background-color: #45668e;
+            &:hover {
+                background-color: #0077ff;
+            }
+        }
+    }
+
+    &__icon {
+        display: inline-block;
+        line-height: 1;
+    }
+}

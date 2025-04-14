@@ -3,24 +3,57 @@
 
 .contacts {
     margin-top: 100px;
+    background: url("/src/img/bg_footer.png") no-repeat right bottom;
+    background-size: 50%;
+
     &__wrap {
         padding: 0 100px;
+        @include breakpoint(tablet-lg) {
+            padding: 0 50px;
+        }
+        @include breakpoint(mobile-lg) {
+            padding: 0 20px;
+        }
+        @include breakpoint(mobile) {
+            padding: 0 10px;
+        }
     }
 
     &__form {
-        background-color: $graphite;
-        padding: 50px 100px 50px 100px;
+        background-color: #1b1f24b8;
+        padding: 50px 100px 30px 100px;
         border-radius: $my-border-radius;
         box-shadow: $box-shadow;
+        backdrop-filter: blur(10px);
+        @include breakpoint(desktop) {
+            padding: 50px 60px 30px 60px;
+        }
+        @include breakpoint(tablet-lg) {
+            padding: 50px 10px 40px 10px;
+        }
+        @include breakpoint(mobile-lg) {
+            padding: 30px 20px 30px 20px;
+        }
+        @include breakpoint(mobile) {
+            padding: 30px 10px 30px 10px;
+        }
     }
 
     &__wrapper {
         display: flex;
         justify-content: space-between;
         gap: 20px;
-        margin-top: 10px;
+        margin-top: 20px;
         &-field {
             width: 50%;
+        }
+        @include breakpoint(tablet) {
+            flex-wrap: wrap;
+        }
+        @include breakpoint(tablet-lg) {
+        }
+        @include breakpoint(mobile-lg) {
+            flex-direction: column;
         }
     }
 
@@ -31,9 +64,19 @@
 
     &__field {
         margin-top: 70px;
+        width: 100%;
         position: relative;
         background-color: $graphite-dark-2;
         border-radius: $my-border-radius;
+        @include breakpoint(tablet-lg) {
+            margin-top: 40px;
+        }
+        @include breakpoint(tablet) {
+            margin-top: 20px;
+        }
+        @include breakpoint(mobile-lg) {
+            margin-top: 30px;
+        }
     }
     &__input {
         width: 100%;
@@ -57,6 +100,12 @@
         }
         &:focus::placeholder {
             opacity: 1;
+        }
+        @include breakpoint(tablet-lg) {
+            font-size: 16px;
+        }
+        @include breakpoint(tablet) {
+            font-size: 24px;
         }
     }
     &__field-textarea {
@@ -86,6 +135,9 @@
         border: none;
         width: 100%;
         cursor: pointer;
+    }
+    @include breakpoint(tablet) {
+        background: none;
     }
 }
 
