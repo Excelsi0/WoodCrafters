@@ -1,0 +1,104 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
+
+.contacts {
+    margin-top: 100px;
+    &__wrap {
+        padding: 0 100px;
+    }
+
+    &__form {
+        background-color: $graphite;
+        padding: 50px 100px 50px 100px;
+        border-radius: $my-border-radius;
+        box-shadow: $box-shadow;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        margin-top: 10px;
+        &-field {
+            width: 50%;
+        }
+    }
+
+    &__fieldset {
+        border: none;
+        padding: 0;
+    }
+
+    &__field {
+        margin-top: 70px;
+        position: relative;
+        background-color: $graphite-dark-2;
+        border-radius: $my-border-radius;
+    }
+    &__input {
+        width: 100%;
+        padding: 24px;
+        font-size: 18px;
+        border: none;
+        border-radius: $my-border-radius;
+        background-color: transparent;
+        outline: none;
+        color: $light;
+
+        &:focus + .contacts__label,
+        &:not(:placeholder-shown) + .contacts__label {
+            top: -30px;
+            left: 10px;
+            font-size: 20px;
+            color: $light;
+        }
+        &::placeholder {
+            opacity: 0;
+        }
+        &:focus::placeholder {
+            opacity: 1;
+        }
+    }
+    &__field-textarea {
+        width: 100%;
+        margin: 70px auto;
+    }
+    &__input-textarea {
+        resize: none;
+    }
+
+    &__label {
+        position: absolute;
+        left: 25px;
+        top: calc(50% - 12px);
+        color: #888;
+        font-size: 18px;
+        pointer-events: none;
+        transition: 0.2s linear;
+    }
+    &__label-textarea {
+        position: absolute;
+        top: 20px;
+    }
+
+    &__button {
+        margin: 20px auto;
+        border: none;
+        width: 100%;
+        cursor: pointer;
+    }
+}
+
+// Стили для автозаполнения
+input:-webkit-autofill {
+    border-radius: inherit; /* Наследует твоё скругление */
+    box-shadow: 0 0 0 1000px $graphite-dark-2 inset !important; /* Цвет заливки */
+    -webkit-box-shadow: 0 0 0 1000px $graphite-dark-2 inset !important;
+    -webkit-text-fill-color: $light !important;
+    transition: background-color 9999s ease-out;
+    transition-delay: 9999s;
+}
+
+input:-webkit-autofill {
+    border-radius: $my-border-radius !important;
+}

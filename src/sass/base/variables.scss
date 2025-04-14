@@ -1,9 +1,11 @@
-$light: #fff;
-$light-hover: #a3723d;
+$light: #ffffff;
+$light-hover: #eb9c48;
 $light-hover-2: #ffb86c;
 $graphite: #1b1f24;
+
 $graphite-light: #212a2e;
 $graphite-dark: #161a1e;
+$graphite-dark-2: #15191c;
 
 // Typography
 $font-primary: "Inter", sans-serif;
@@ -29,11 +31,25 @@ $container-padding-tablet: 15px;
 
 $box-shadow: 0 0 30px 20px #0000002d;
 
+$my-border-radius: 10px;
+
 @keyframes neon {
     from {
         text-shadow: 0 0 10px #000;
     }
     to {
-        text-shadow: 0 0 20px #fff;
+        text-shadow:
+            0 0 15px #fff,
+            0 0 15px #fff,
+            0 0 15px #fff;
+    }
+}
+
+@keyframes neon-2 {
+    from {
+        text-shadow: 0 0 10px #000;
+    }
+    to {
+        text-shadow: 0 0 15px #fff;
     }
 }

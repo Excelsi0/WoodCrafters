@@ -12,6 +12,11 @@
 @use "/src/sass/blocks/about.scss";
 @use "/src/sass/blocks/materials.scss";
 @use "/src/sass/blocks/gallery.scss";
+@use "/src/sass/blocks/benefits.scss";
+@use "/src/sass/blocks/reviews.scss";
+@use "/src/sass/blocks/parallax.scss";
+@use "/src/sass/blocks/contacts.scss";
+
 html {
     background-color: $graphite;
 }

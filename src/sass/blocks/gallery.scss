@@ -1,101 +1,139 @@
 @use "/src/sass/base/variables.scss" as *;
 @use "/src/sass/base/mixins.scss" as *;
 
-// .gallery {
-//     padding: 150px 0;
-
-//     &__wrap {
-//         margin-top: 60px;
-//     }
-
-//     &__img {
-//         width: 100%;
-//         height: 400px;
-//         object-fit: cover;
-//         border-radius: 16px;
-//         box-shadow: 0 8px 24px $graphite-dark;
-//         transition: transform 0.3s linear;
-
-//         &:hover {
-//             transform: scale(1.03);
-//         }
-//     }
-// }
-// .uk-slider-nav {
-//     margin-top: 60px;
-// }
-
-// .uk-icon {
-//     color: #000;
-//     background-color: $light;
-//     border-radius: 50%;
-//     width: 50px;
-//     height: 50px;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     box-shadow: 0 8px 24px $graphite-light;
-//     transition: background-color 0.3s linear;
-
-//     &:hover {
-//         background-color: $light-hover-2;
-//     }
-// }
-
 .gallery {
-    padding: 150px 0;
-
-    &__wrap {
-        margin-top: 60px;
-        overflow: hidden;
+    margin-top: 200px;
+    @include breakpoint(mobile-lg) {
+        margin-top: 100px;
+    }
+    @include breakpoint(mobile) {
+        margin-top: 70px;
+    }
+    &__swiper {
+        margin-top: 100px;
+        @include breakpoint(mobile-lg) {
+            margin-top: 50px;
+        }
+        @include breakpoint(mobile) {
+            margin-top: 25px;
+        }
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: $graphite-dark;
+        font-size: 1px;
+        background-color: $light;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-tap-highlight-color: transparent;
+        outline: none;
     }
 
-    &__list {
-        li {
-            overflow: hidden;
-            border-radius: 5px;
-        }
+    &__slide {
+        width: 100%;
+        height: 400px;
+        padding-bottom: 45px;
     }
 
     &__img {
         width: 100%;
-        height: 400px;
+        height: 100%;
         object-fit: cover;
-        border-radius: 5px;
-        box-shadow: 0 8px 24px $graphite-dark;
-        transition: transform 1s linear;
-        z-index: 1;
+        border-radius: $my-border-radius;
+    }
+    @include breakpoint(mobile-lg) {
+        .swiper-button-prev {
+            display: none;
+        }
+        .swiper-button-next {
+            display: none;
+        }
+    }
+    .swiper-pagination {
+        bottom: 0;
+    }
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        background-color: $light;
+        opacity: 1;
+        -webkit-tap-highlight-color: transparent;
+    }
+    .swiper-pagination-bullet-active {
+        transform: scale(1.5);
+        background-color: $light-hover-2;
+    }
 
-        @include not-hover-mobile {
+    @include not-hover-mobile {
+        .button-prev,
+        .button-next {
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-100%);
+            z-index: 10;
+            box-shadow: 0 0 10px 0px $graphite;
+            transition: box-shadow 0.3s linear;
+            -webkit-tap-highlight-color: transparent;
+            outline: none;
             &:hover {
-                transform: scale(1.1);
+                box-shadow: 0 0 10px 10px $graphite-dark;
+            }
+            g {
+                fill: $light;
+                transition: fill 0.3s linear;
+                &:hover {
+                    fill: $light-hover-2;
+                }
+                &:active {
+                    fill: $light-hover;
+                }
+            }
+        }
+    }
+    .button-prev {
+        left: 10px;
+    }
+    .button-next {
+        right: 10px;
+    }
+    @include breakpoint(mobile-lg) {
+        .button-prev,
+        .button-next {
+            display: none;
+            g {
+                display: none;
             }
         }
     }
 }
 
-.uk-slider-nav {
-    margin-top: 60px;
+.lb-outerContainer {
+    background-color: $graphite-dark;
 }
 
-.uk-icon {
-    color: #000;
-    background-color: $light;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 8px 24px $graphite-light;
-    transition: background-color 0.3s linear;
+// .lb-loader {
+//     background: transparent !important;
+//     border: none !important;
+//     padding: 0 !important;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
 
-    @include not-hover-mobile {
-        &:hover {
-            background-color: $light-hover-2;
-        }
-    }
-    @include breakpoint(tablet-lg) {
-        display: none;
-    }
-}
+// /* Добавить кастомное изображение (например, ваш спиннер) */
+// .lb-loader:before {
+//     content: "";
+//     display: block;
+//     width: 50px; /* Размер кастомного спиннера */
+//     height: 50px;
+//     background: url("/src/icon/load.gif") no-repeat center center; /* Путь к вашему изображению */
+//     background-size: contain;
+// }

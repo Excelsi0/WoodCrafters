@@ -9,8 +9,7 @@
     transition: all 0.2s linear;
 
     background-color: $graphite-light;
-    box-shadow: $box-shadow;
-    border-radius: 5px;
+    border-radius: $my-border-radius;
     color: $light;
     font-weight: 300;
     font-size: 28px;

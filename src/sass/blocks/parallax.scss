@@ -1,0 +1,41 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
+
+.parallax {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    border-radius: $my-border-radius;
+    height: 160px;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $graphite;
+        display: block;
+        font-size: 70px;
+        font-weight: 700;
+        color: #ffd89f;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-shadow:
+            0 0 10px $graphite,
+            0 0 10px $graphite,
+            0 0 15px $graphite,
+            0 0 20px $graphite;
+
+        @include breakpoint(tablet-lg) {
+            font-size: 50px;
+        }
+        @include breakpoint(mobile-lg) {
+            font-size: 30px;
+        }
+        @include breakpoint(mobile) {
+            font-size: 38px;
+        }
+    }
+}

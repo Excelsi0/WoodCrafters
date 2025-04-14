@@ -1,0 +1,64 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
+
+.benefits {
+    margin-top: 200px;
+    @include breakpoint(mobile-lg) {
+        margin-top: 100px;
+    }
+    @include breakpoint(mobile) {
+        margin-top: 70px;
+    }
+    &__accordion {
+        margin-top: 60px;
+        background: $graphite-light;
+        border-radius: $my-border-radius;
+        padding: 30px;
+        box-shadow: 0 0 10px 0 $graphite-dark;
+        @include breakpoint(mobile-lg) {
+            padding: 20px;
+        }
+        @include breakpoint(mobile) {
+            padding: 15px;
+        }
+    }
+    &__item {
+        background: $graphite;
+        border-radius: $my-border-radius;
+    }
+    &__title {
+        padding: 20px 30px;
+        font-size: 20px;
+        font-weight: 600;
+        color: $light;
+        transition: color 0.3s linear;
+
+        &:hover {
+            color: $light-hover-2;
+        }
+
+        @include breakpoint(mobile-lg) {
+            font-size: 22px;
+        }
+        @include breakpoint(mobile) {
+            font-size: 20px;
+        }
+    }
+    &__content {
+        padding: 0 30px 30px;
+        font-size: 20px;
+        text-shadow: 0 0 10px $graphite;
+        font-weight: 300;
+        color: $light;
+        line-height: 1.6;
+        @include breakpoint(mobile-lg) {
+            font-size: 22px;
+        }
+        @include breakpoint(mobile) {
+            font-size: 20px;
+        }
+    }
+    &__no-wrap {
+        white-space: nowrap;
+    }
+}

@@ -11,6 +11,7 @@
     "license": "ISC",
     "description": "",
     "devDependencies": {
+        "lightbox2": "^2.11.5",
         "postcss": "^8.5.3",
         "postcss-preset-env": "^10.1.5",
         "postcss-pxtorem": "^6.1.0",
@@ -20,7 +21,10 @@
         "vite": "^6.2.4"
     },
     "dependencies": {
-        "bootstrap": "^5.3.3",
+        "bootstrap": "^5.3.5",
+        "inputmask": "^5.0.9",
+        "jquery": "^3.7.1",
+        "swiper": "^11.2.6",
         "uikit": "^3.23.5"
     }
 }
