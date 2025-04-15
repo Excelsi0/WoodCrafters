@@ -159,6 +159,11 @@
             margin-top: 40px;
         }
     }
+    @include breakpoint(mobile) {
+        &__items {
+            margin-top: 20px;
+        }
+    }
 }
 
 .about__item:nth-child(even) {

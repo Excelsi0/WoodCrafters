@@ -1,22 +1,24 @@
-@use "/src/sass/libs/modern-normalize.min.css";
+@use "base/variables.scss" as *;
+@use "libs/modern-normalize.min.css";
 
-@use "/src/sass/base/variables.scss" as *;
-@use "/src/sass/base/basic.scss";
-@use "/src/sass/base/container.scss";
+@use "base/basic.scss";
+@use "base/container.scss";
 
-@use "/src/sass/blocks/logo.scss";
-@use "/src/sass/blocks/nav.scss";
-@use "/src/sass/blocks/hero.scss";
-@use "/src/sass/blocks/titles.scss";
-@use "/src/sass/blocks/btn.scss";
-@use "/src/sass/blocks/about.scss";
-@use "/src/sass/blocks/materials.scss";
-@use "/src/sass/blocks/gallery.scss";
-@use "/src/sass/blocks/benefits.scss";
-@use "/src/sass/blocks/reviews.scss";
-@use "/src/sass/blocks/parallax.scss";
-@use "/src/sass/blocks/contacts.scss";
-@use "/src/sass/blocks/contact_us.scss";
+@use "blocks/logo.scss";
+@use "blocks/nav.scss";
+@use "blocks/hero.scss";
+@use "blocks/titles.scss";
+@use "blocks/btn.scss";
+@use "blocks/about.scss";
+@use "blocks/materials.scss";
+@use "blocks/gallery.scss";
+@use "blocks/benefits.scss";
+@use "blocks/reviews.scss";
+@use "blocks/parallax.scss";
+@use "blocks/contacts.scss";
+@use "blocks/contact_us.scss";
+@use "blocks/footer.scss";
+@use "blocks/modal.scss";
 
 html {
     background-color: $graphite;

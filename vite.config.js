@@ -7,13 +7,15 @@ import postcssPixelToRem from "postcss-pxtorem";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
+    base: "./",
     build: {
         rollupOptions: {
             input: {
                 main: resolve(__dirname, "index.html"),
-                // nested: resolve(__dirname, 'nested/index.html'),
             },
         },
+        assetsDir: "assets",
+        emptyOutDir: true,
     },
     css: {
         postcss: {

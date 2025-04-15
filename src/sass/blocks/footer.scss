@@ -1,0 +1,22 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.site-footer {
+    color: #b6b6b6;
+    text-align: center;
+
+    p {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    a {
+        color: #ff00cc;
+        text-decoration: none;
+        font-weight: bold;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

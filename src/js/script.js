@@ -1,8 +1,9 @@
-import "/node_modules/uikit/dist/css/uikit-core.min.css";
-
 import UIkit from "uikit";
 import Icons from "uikit/dist/js/uikit-icons";
 import "uikit/dist/css/uikit.min.css";
+
+// Инициализируем UIkit
+window.UIkit = UIkit;
 UIkit.use(Icons);
 
 import Swiper from "swiper";
@@ -11,10 +12,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import "lightbox2/dist/css/lightbox.min.css"; // Подключаем стили для lightbox
+import "lightbox2/dist/css/lightbox.min.css";
 import lightbox from "lightbox2";
 
-import "/src/sass/style.scss";
+import "../sass/style.scss";
 
 // Маска для телефона
 import Inputmask from "inputmask";

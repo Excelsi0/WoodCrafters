@@ -1,0 +1,48 @@
+@use "/src/sass/base/mixins.scss" as *;
+@use "/src/sass/base/variables.scss" as *;
+
+.contact-modal {
+    .container {
+        padding: 0;
+    }
+    .contacts {
+        background: none;
+        &__form {
+            padding: 20px 0 0;
+            background-color: $graphite;
+        }
+        &__fieldset {
+            padding: 20px;
+        }
+        &__wrap {
+            padding: 0;
+        }
+        &__title {
+            @include breakpoint(mobile-lg) {
+                font-size: 22px;
+            }
+        }
+        &__wrapper {
+            @include breakpoint(mobile-lg) {
+                margin-top: 10px;
+            }
+        }
+        &__input {
+            @include breakpoint(mobile-lg) {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.uk-modal-dialog {
+    background-color: transparent;
+    width: 1000px;
+}
+
+.uk-modal.uk-open {
+    background-color: rgba(0, 0, 0, 0.85); // более тёмный фон
+}
+.uk-section {
+    padding: 20px;
+}
