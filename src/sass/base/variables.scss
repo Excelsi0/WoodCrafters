@@ -39,9 +39,8 @@ $my-border-radius: 10px;
     }
     to {
         text-shadow:
-            0 0 15px #fff,
-            0 0 15px #fff,
-            0 0 15px #fff;
+            0 0 15px $light-hover-2,
+            0 0 15px $light-hover-2;
     }
 }
 

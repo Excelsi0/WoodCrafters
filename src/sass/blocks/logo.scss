@@ -28,23 +28,24 @@
         align-items: center;
         gap: 5px;
 
-        color: $light;
-        font-size: 16px;
-        font-weight: 500;
+        color: $light-hover-2;
+        font-size: 24px;
+        font-weight: 700;
         font-style: normal;
         text-transform: uppercase;
         letter-spacing: 1px;
         white-space: nowrap;
-
-        text-shadow:
-            0 0 10px rgba(0, 0, 0, 0.8),
-            0 0 20px rgba(0, 0, 0, 0.4);
-
         animation: neon 2s infinite alternate;
 
         span {
+            color: $light;
+            font-size: 16px;
+            font-weight: 400;
             display: block;
             white-space: nowrap;
+            animation: none !important;
+            text-shadow: none !important;
+            filter: none !important;
         }
     }
 }
@@ -52,7 +53,10 @@
 @include breakpoint(tablet-lg) {
     .logo {
         &__text {
-            font-size: 14px;
+            font-size: 22px;
+            span {
+                font-size: 14px;
+            }
         }
         &__border {
             padding: 12px 30px 25px;
@@ -66,10 +70,13 @@
 @include breakpoint(tablet) {
     .logo {
         &__text {
-            font-size: 12px;
+            font-size: 22px;
+            span {
+                font-size: 10px;
+            }
         }
         &__border {
-            padding: 10px 25px 20px;
+            padding: 10px 14px 20px;
         }
         &__img {
             width: 35px;
@@ -80,7 +87,10 @@
 @include breakpoint(mobile-lg) {
     .logo {
         &__text {
-            font-size: 14px;
+            font-size: 22px;
+            span {
+                font-size: 10px;
+            }
         }
         &__border {
             padding: 12px 25px 20px;

@@ -7,7 +7,7 @@ window.UIkit = UIkit;
 UIkit.use(Icons);
 
 import Swiper from "swiper";
-import { Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -23,22 +23,80 @@ import "/src/fontello/css/fontello.css";
 
 // ловим ошибки
 try {
-    // слайдер
     const swiper = new Swiper(".gallery__swiper", {
-        // количество фото на странице
-        slidesPerView: 1,
-        // Циклический слайдер
         loop: true,
-        // пагинация кнопки снизу
+        autoplay: {
+            delay: 0,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: false,
+        },
+        speed: 5000, // медленно для autoplay
+        spaceBetween: 20,
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
         },
-        // кнопки
         navigation: {
             nextEl: ".button-next",
             prevEl: ".button-prev",
         },
+        breakpoints: {
+            320: { slidesPerView: 1, spaceBetween: 20 },
+            576: { slidesPerView: 2, spaceBetween: 30 },
+            768: { slidesPerView: 3, spaceBetween: 40 },
+            1024: { slidesPerView: 4, spaceBetween: 40 },
+        },
+        modules: [Autoplay, Navigation, Pagination],
+    });
+
+    const swiperEl = document.querySelector(".gallery__swiper");
+
+    // Остановка автопрокрутки при наведении
+    swiperEl.addEventListener("mouseenter", () => {
+        swiper.autoplay.stop();
+    });
+
+    swiperEl.addEventListener("mouseleave", () => {
+        swiper.autoplay.start();
+    });
+
+    // Быстрое переключение по кнопкам
+    const fastSpeed = 400;
+
+    const nextBtn = document.querySelector(".button-next");
+    const prevBtn = document.querySelector(".button-prev");
+
+    if (nextBtn && prevBtn) {
+        nextBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            swiper.setTransition(fastSpeed);
+            swiper.slideNext();
+        });
+
+        prevBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            swiper.setTransition(fastSpeed);
+            swiper.slidePrev();
+        });
+    }
+} catch (error) {
+    console.error("Ошибка инициализации слайдера:", error);
+}
+// Слайдер партнеров
+try {
+    // слайдер
+    const partnersSwiper = new Swiper(".partners__swiper", {
+        // количество фото на странице
+        slidesPerView: 1,
+        // Циклический слайдер
+        loop: true,
+        autoplay: {
+            delay: 0, // задержка между переключениями
+            disableOnInteraction: false, // чтобы не останавливался при взаимодействии
+        },
+        speed: 2000, // скорость пролистывания (меньше — быстрее)
+        slidesPerView: 1,
+        spaceBetween: 20,
         // брейкпоинты
         breakpoints: {
             320: {
@@ -58,7 +116,7 @@ try {
                 spaceBetween: 40,
             },
         },
-        modules: [Navigation, Pagination],
+        modules: [Autoplay],
     });
 } catch (error) {
     // выводим ошибки
