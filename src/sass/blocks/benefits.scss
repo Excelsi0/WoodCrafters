@@ -2,7 +2,7 @@
 @use "/src/sass/base/mixins.scss" as *;
 
 .benefits {
-    margin-top: 200px;
+    margin-top: 100px;
     @include breakpoint(mobile-lg) {
         margin-top: 100px;
     }
@@ -10,7 +10,7 @@
         margin-top: 70px;
     }
     &__accordion {
-        margin-top: 60px;
+        margin-top: 70px;
         background: $graphite-light;
         border-radius: $my-border-radius;
         padding: 30px;

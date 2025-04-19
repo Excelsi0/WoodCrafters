@@ -10,7 +10,6 @@
 @use "blocks/titles.scss";
 @use "blocks/btn.scss";
 @use "blocks/about.scss";
-@use "blocks/materials.scss";
 @use "blocks/gallery.scss";
 @use "blocks/benefits.scss";
 @use "blocks/reviews.scss";
@@ -22,4 +21,37 @@
 @use "blocks/partners.scss";
 html {
     background-color: $graphite;
+}
+
+.gallery__swiper {
+    .swiper-wrapper {
+        transition-timing-function: linear !important;
+    }
+    .swiper-slide {
+        transition: none !important;
+        will-change: transform;
+    }
+}
+
+.lb-outerContainer {
+    transition: none !important;
+}
+
+.lb-container {
+    transition: none !important;
+}
+
+.lb-image {
+    transition: none !important;
+}
+
+// Оптимизация загрузки изображений
+[data-lightbox] {
+    img {
+        transition: opacity 0.3s ease;
+    }
+
+    &:hover img {
+        opacity: 0.8;
+    }
 }

@@ -2,7 +2,7 @@
 @use "/src/sass/base/mixins.scss" as *;
 
 .gallery {
-    margin-top: 200px;
+    margin-top: 150px;
     @include breakpoint(mobile-lg) {
         margin-top: 100px;
     }
@@ -10,7 +10,7 @@
         margin-top: 70px;
     }
     &__swiper {
-        margin-top: 100px;
+        margin-top: 70px;
         @include breakpoint(mobile-lg) {
             margin-top: 50px;
         }
@@ -68,28 +68,31 @@
         background-color: $light-hover-2;
     }
 
-    @include not-hover-mobile {
-        .button-prev,
-        .button-next {
-            cursor: pointer;
-            fill: $light;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-100%);
-            z-index: 10;
-            box-shadow: 0 0 10px 0px $graphite;
-            transition: box-shadow 0.3s linear;
-            -webkit-tap-highlight-color: transparent;
-            outline: none;
+    .button-prev,
+    .button-next {
+        cursor: pointer;
+        fill: $light;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-100%);
+        z-index: 10;
+        box-shadow: 0 0 10px 0px $graphite;
+        transition: box-shadow 0.3s linear;
+        -webkit-tap-highlight-color: transparent;
+        outline: none;
+        @include not-hover-mobile {
             &:hover {
                 box-shadow: 0 0 10px 10px $graphite-dark;
             }
-            g {
-                fill: $light;
-                transition: fill 0.3s linear;
+        }
+
+        g {
+            fill: $light;
+            transition: fill 0.3s linear;
+            @include not-hover-mobile {
                 &:hover {
                     fill: $light-hover-2;
                 }

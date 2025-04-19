@@ -15,11 +15,29 @@ import "swiper/css/pagination";
 import "lightbox2/dist/css/lightbox.min.css";
 import lightbox from "lightbox2";
 
-import "../sass/style.scss";
-
 // Маска для телефона
 import Inputmask from "inputmask";
 import "/src/fontello/css/fontello.css";
+import "/src/sass/style.scss";
+
+// Предзагрузка изображений для lightbox
+document.addEventListener("DOMContentLoaded", () => {
+    const lightboxLinks = document.querySelectorAll("[data-lightbox]");
+    lightboxLinks.forEach((link) => {
+        const img = new Image();
+        img.src = link.href;
+    });
+});
+
+// Инициализация lightbox с настройками
+lightbox.option({
+    fadeDuration: 300,
+    imageFadeDuration: 300,
+    resizeDuration: 300,
+    wrapAround: true,
+    disableScrolling: true,
+    albumLabel: "Изображение %1 из %2",
+});
 
 // ловим ошибки
 try {
@@ -30,7 +48,7 @@ try {
             disableOnInteraction: false,
             pauseOnMouseEnter: false,
         },
-        speed: 5000, // медленно для autoplay
+        speed: 5000,
         spaceBetween: 20,
         pagination: {
             el: ".swiper-pagination",
@@ -49,22 +67,23 @@ try {
         modules: [Autoplay, Navigation, Pagination],
     });
 
+    // Изменение скорости при наведении
     const swiperEl = document.querySelector(".gallery__swiper");
-
-    // Остановка автопрокрутки при наведении
     swiperEl.addEventListener("mouseenter", () => {
-        swiper.autoplay.stop();
+        swiper.setTransition(500);
+        setTimeout(() => {
+            swiper.autoplay.stop();
+        }, 500);
     });
-
     swiperEl.addEventListener("mouseleave", () => {
+        swiper.setTransition(5000);
         swiper.autoplay.start();
     });
 
     // Быстрое переключение по кнопкам
-    const fastSpeed = 400;
-
     const nextBtn = document.querySelector(".button-next");
     const prevBtn = document.querySelector(".button-prev");
+    const fastSpeed = 300;
 
     if (nextBtn && prevBtn) {
         nextBtn.addEventListener("click", (e) => {
@@ -94,7 +113,7 @@ try {
             delay: 0, // задержка между переключениями
             disableOnInteraction: false, // чтобы не останавливался при взаимодействии
         },
-        speed: 2000, // скорость пролистывания (меньше — быстрее)
+        speed: 2200, // скорость пролистывания (меньше — быстрее)
         slidesPerView: 1,
         spaceBetween: 20,
         // брейкпоинты

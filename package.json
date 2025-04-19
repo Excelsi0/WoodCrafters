@@ -7,7 +7,8 @@
         "build": "vite build",
         "preview": "vite preview",
         "test": "echo \"Error: no test specified\" && exit 1",
-        "format": "prettier --write \"**/*.{html,css,scss,js}\""
+        "format": "prettier --write \"**/*.{html,css,scss,js}\"",
+        "process-gallery": "node src/js/process-gallery.js"
     },
     "author": "excelsio",
     "license": "ISC",

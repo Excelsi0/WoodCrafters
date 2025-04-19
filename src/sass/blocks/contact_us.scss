@@ -55,6 +55,13 @@
                 background-color: #0077ff;
             }
         }
+
+        &--insta {
+            background-color: #e1306c;
+            &:hover {
+                background-color: #ff067e;
+            }
+        }
     }
 
     &__icon {

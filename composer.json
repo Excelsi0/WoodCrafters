@@ -1,0 +1,17 @@
+{
+    "name": "excelsio/wd-craft",
+    "autoload": {
+        "psr-4": {
+            "Excelsio\\WdCraft\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Excelsio",
+            "email": "vapeexcelsio@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
