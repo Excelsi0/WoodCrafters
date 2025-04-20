@@ -1,0 +1,91 @@
+@use "/src/sass/base/mixins.scss" as *;
+@use "/src/sass/base/variables.scss" as *;
+
+.about-page {
+    padding: 60px 0;
+    @include breakpoint(tablet-lg) {
+        padding: 40px 0;
+    }
+    @include breakpoint(tablet) {
+        padding: 20px 0;
+    }
+    @include breakpoint(mobile-lg) {
+        padding: 10px 0;
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+        margin-top: 40px;
+
+        @include breakpoint(tablet-md) {
+            flex-direction: column;
+        }
+    }
+
+    &__content {
+        flex: 1;
+    }
+    &__text {
+        margin-top: 30px;
+        font-size: 18px;
+        line-height: 1.6;
+        color: $light;
+        margin-bottom: 20px;
+        @include breakpoint(tablet-md) {
+            text-align: center;
+        }
+    }
+
+    &__title {
+        margin-top: 50px;
+        text-align: start;
+        &-h1 {
+            margin-top: 0;
+        }
+        @include breakpoint(tablet-lg) {
+            font-size: 36px;
+        }
+        @include breakpoint(tablet-md) {
+            text-align: center;
+        }
+    }
+
+    &__principles {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+
+        li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+            color: $light;
+            font-size: 18px;
+            @include breakpoint(tablet-md) {
+                text-align: center;
+                padding-left: 0;
+            }
+        }
+    }
+
+    &__image {
+        flex: 1;
+        max-width: 500px;
+        height: 700px;
+
+        @include breakpoint(tablet-md) {
+            max-width: 100%;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: $my-border-radius;
+        box-shadow: $box-shadow;
+    }
+}

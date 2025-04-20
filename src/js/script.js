@@ -142,6 +142,32 @@ try {
     console.log(error);
 }
 
+// Слайдер на странице галереи
+try {
+    const swiperGalleryPage = new Swiper(".gallery__swiper-page", {
+        loop: true,
+        speed: 300,
+        spaceBetween: 20,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".button-next",
+            prevEl: ".button-prev",
+        },
+        breakpoints: {
+            320: { slidesPerView: 1, spaceBetween: 20 },
+            576: { slidesPerView: 2, spaceBetween: 30 },
+            768: { slidesPerView: 3, spaceBetween: 40 },
+            1024: { slidesPerView: 4, spaceBetween: 40 },
+        },
+        modules: [Navigation, Pagination],
+    });
+} catch (error) {
+    console.error("Ошибка инициализации слайдера:", error);
+}
+
 // Telegram
 const tgInput = document.getElementById("telegram");
 tgInput.addEventListener("input", function () {

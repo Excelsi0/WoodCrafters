@@ -3,6 +3,15 @@
 
 .gallery {
     margin-top: 150px;
+    &-page {
+        margin-top: 70px;
+        @include breakpoint(mobile-lg) {
+            margin-top: 70px;
+        }
+        @include breakpoint(mobile) {
+            margin-top: 50px;
+        }
+    }
     @include breakpoint(mobile-lg) {
         margin-top: 100px;
     }
@@ -16,6 +25,15 @@
         }
         @include breakpoint(mobile) {
             margin-top: 25px;
+        }
+        &-page {
+            margin-top: 40px;
+            @include breakpoint(mobile-lg) {
+                margin-top: 30px;
+            }
+            @include breakpoint(mobile) {
+                margin-top: 25px;
+            }
         }
     }
     .swiper-button-prev,
@@ -123,21 +141,15 @@
     background-color: $graphite-dark;
 }
 
-// .lb-loader {
-//     background: transparent !important;
-//     border: none !important;
-//     padding: 0 !important;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-// }
-
-// /* Добавить кастомное изображение (например, ваш спиннер) */
-// .lb-loader:before {
-//     content: "";
-//     display: block;
-//     width: 50px; /* Размер кастомного спиннера */
-//     height: 50px;
-//     background: url("/src/icon/load.gif") no-repeat center center; /* Путь к вашему изображению */
-//     background-size: contain;
-// }
+.gallery__button-container {
+    display: flex;
+    justify-content: end;
+    @include breakpoint(tablet) {
+        margin-top: 30px;
+        justify-content: center;
+    }
+}
+.gallery__button {
+    margin-top: 0;
+    font-size: 32px;
+}
