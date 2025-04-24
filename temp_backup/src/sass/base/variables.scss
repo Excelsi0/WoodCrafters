@@ -1,0 +1,56 @@
+$light: #ffffff;
+$light-hover: #eb9c48;
+$light-hover-2: #ffb86c;
+$graphite: #1b1f24;
+
+$graphite-light: #212a2e;
+$graphite-dark: #161a1e;
+$graphite-dark-2: #15191c;
+
+// Typography
+$font-primary: "Inter", sans-serif;
+$font-heading: "Playfair Display", serif;
+
+// Breakpoints
+$breakpoints: (
+    mobile: 375px,
+    // iPhone SE, маленькие телефоны
+    mobile-lg: 576px,
+    // Большие телефоны
+    tablet: 768px,
+    // спец брейкпоинт для адаптива о нас
+    tablet-md: 900px,
+    // iPad mini, планшеты
+    tablet-lg: 1024px,
+    // iPad Air, большие планшеты
+    desktop: 1200px, // Стандартная десктопная ширина
+);
+
+// Container
+$container-max-width: 1200px;
+$container-padding: 20px;
+$container-padding-tablet: 15px;
+
+$box-shadow: 0 0 30px 20px #0000002d;
+
+$my-border-radius: 10px;
+
+@keyframes neon {
+    from {
+        text-shadow: 0 0 10px #000;
+    }
+    to {
+        text-shadow:
+            0 0 15px $light-hover-2,
+            0 0 15px $light-hover-2;
+    }
+}
+
+@keyframes neon-2 {
+    from {
+        text-shadow: 0 0 10px #000;
+    }
+    to {
+        text-shadow: 0 0 15px #fff;
+    }
+}

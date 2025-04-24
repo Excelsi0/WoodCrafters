@@ -1,0 +1,27 @@
+@use "sass:map";
+@use "variables" as *;
+
+// Media queries
+@mixin breakpoint-up($point) {
+    @media (min-width: map.get($breakpoints, $point)) {
+        @content;
+    }
+}
+
+@mixin breakpoint-down($point) {
+    @media (max-width: map.get($breakpoints, $point)) {
+        @content;
+    }
+}
+
+@mixin breakpoint($point) {
+    @include breakpoint-down($point) {
+        @content;
+    }
+}
+
+@mixin not-hover-mobile {
+    @media (hover: hover) and (pointer: fine) {
+        @content;
+    }
+}

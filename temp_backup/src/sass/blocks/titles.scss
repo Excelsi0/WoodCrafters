@@ -1,0 +1,50 @@
+@use "/src/sass/base/variables" as *;
+@use "/src/sass/base/mixins" as *;
+
+.title {
+    font-family: $font-heading;
+    color: $light;
+    margin: 0;
+
+    &-h1 {
+        font-size: 60px;
+        font-weight: 500;
+        line-height: 1.1;
+    }
+    &-h2 {
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 1.1;
+        text-align: center;
+    }
+}
+
+@include breakpoint(tablet-lg) {
+    .title {
+        &-h1 {
+            font-size: 50px;
+        }
+        &-h2 {
+            font-size: 38px;
+        }
+    }
+}
+
+@include breakpoint(tablet) {
+    .title {
+        &-h1 {
+            font-size: 36px;
+        }
+    }
+}
+
+@include breakpoint(mobile-lg) {
+    .title {
+        &-h1 {
+            text-align: center;
+        }
+        &-h2 {
+            font-size: 30px;
+        }
+    }
+}

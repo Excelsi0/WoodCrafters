@@ -1,0 +1,33 @@
+{
+    "name": "wdcraft",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "format": "prettier --write \"**/*.{html,css,scss,js}\"",
+        "process-gallery": "node src/js/process-gallery.js"
+    },
+    "author": "excelsio",
+    "license": "ISC",
+    "description": "",
+    "devDependencies": {
+        "lightbox2": "^2.11.5",
+        "postcss": "^8.5.3",
+        "postcss-preset-env": "^10.1.5",
+        "postcss-pxtorem": "^6.1.0",
+        "prettier": "^3.5.3",
+        "sass": "^1.86.1",
+        "sass-embedded": "^1.86.1",
+        "vite": "^6.2.4"
+    },
+    "dependencies": {
+        "bootstrap": "^5.3.5",
+        "inputmask": "^5.0.9",
+        "jquery": "^3.7.1",
+        "swiper": "^11.2.6",
+        "uikit": "^3.23.5"
+    }
+}

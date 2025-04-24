@@ -1,0 +1,782 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description"
+            content="Tatwood - мастерская Дамира Ильясова. Уникальные изделия из древесины: мебель, декоративные панели, столярные изделия ручной работы." />
+        <meta name="keywords"
+            content="столярная мастерская, мебель из дерева, изделия из массива, ручная работа, деревянная мебель, Татарстан" />
+        <meta name="author" content="Tatwood" />
+        <meta property="og:title"
+            content="Tatwood - мастерская Дамира Ильясова" />
+        <meta property="og:description"
+            content="Уникальные изделия из древесины ручной работы" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://tat-wood.ru" />
+        <meta property="og:image" content="./src/img/logo/logo.svg" />
+
+        <!-- !NAME_TITLE -->
+        <title>Tatwood - мастерская Дамира Ильясова | Изделия из древесины
+            ручной работы</title>
+
+        <!-- !FAVICON -->
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./src/favicon/apple-touch-icon.png" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./src/favicon/favicon-32x32.png" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./src/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="./src/favicon/site.webmanifest" />
+
+        <!-- !FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
+            rel="stylesheet" />
+        <script type="module" src="./src/js/script.js"></script>
+        <script type="module" src="./src/js/menu.js"></script>
+    </head>
+    <body>
+        <main>
+            <section class="hero">
+                <div class="container">
+                    <nav class="nav">
+                        <div class="nav__left">
+                            <a href="#" class="logo">
+                                <fieldset class="logo__border">
+                                    <legend>
+                                        <img
+                                            class="logo__img"
+                                            src="/src/logo/logo.svg"
+                                            alt />
+                                    </legend>
+                                    <h2 class="logo__text">
+                                        Tatwood&nbsp;
+                                        <span>мастерская Дамира Ильясова</span>
+                                    </h2>
+                                </fieldset></a>
+                        </div>
+                        <div class="nav__right">
+                            <a href="index.html" class="nav__link">Главная</a>
+                            <a href="about.html" class="nav__link">О нас</a>
+                            <a href="gallery.html" class="nav__link">Галерея</a>
+                            <a href="contacts.html"
+                                class="nav__link">Контакты</a>
+                        </div>
+                    </nav>
+
+                    <div class="hero-content">
+                        <div class="hero-content__left">
+                            <h1 class="title title-h1 hero__title">
+                                Уникальные изделия из древесины
+                            </h1>
+
+                            <div class="hero-gallery">
+                                <img
+                                    src="./src/img/hero/chest.jpeg"
+                                    alt="charset"
+                                    class="hero-gallery__item"
+                                    id="hero-gallery__item-1" />
+                                <img
+                                    src="./src/img/hero/craft_table.jpeg"
+                                    alt="craft_table"
+                                    class="hero-gallery__item"
+                                    id="hero-gallery__item-2" />
+                                <img
+                                    src="./src/img/hero/table-and-chair.jpeg"
+                                    alt="table-and-chair"
+                                    class="hero-gallery__item"
+                                    id="hero-gallery__item-3" />
+                            </div>
+                        </div>
+                        <div class="hero-content__right">
+                            <div class="hero-content__text">
+                                <p>
+                                    Уникальные изделия из массива ручной работы:
+                                    мебель, аксессуары для дома и особенные
+                                    подарки.
+                                </p>
+                                <p>
+                                    Каждое изделие хранит свою историю и
+                                    характер, созданные самой природой.
+                                </p>
+                            </div>
+                            <a href="#"
+                                class="btn hero-content__btn"
+                                uk-toggle="target: #modal-center">Связаться
+                                с нами</a>
+                        </div>
+                    </div>
+                </div>
+                <img
+                    src="./src/img/hero/branch_bg.png"
+                    alt="hero-bg"
+                    class="hero-bg" />
+            </section>
+
+            <section class="crafts">
+                <div class="container">
+                    <h2 class="title title-h2" id="about">То, что мы
+                        создаём</h2>
+                    <div class="crafts__items">
+                        <div class="crafts__item">
+                            <div class="crafts__image" id="crafts__img-1">
+                                <img
+                                    src="./src/img/about/mosaic.jpeg"
+                                    alt="mosaic"
+                                    class="crafts__img" />
+                            </div>
+                            <div class="crafts__content" id="crafts__content-1">
+                                <h3 class="crafts__title">
+                                    Декоративные панели
+                                </h3>
+                                <p class="crafts__text">
+                                    Настенные мозаики и деревянные элементы —
+                                    это способ добавить характер и тепло в любое
+                                    пространство. Такие изделия подчёркивают
+                                    фактуру дерева и становятся выразительным
+                                    акцентом в интерьере.
+                                </p>
+                                <a href class="crafts__button"
+                                    uk-toggle="target: #modal-center">заказать</a>
+                            </div>
+                        </div>
+
+                        <div class="crafts__item">
+                            <div class="crafts__image">
+                                <img
+                                    src="./src/img/about/wine_shelf.jpg.webp"
+                                    alt="wine_shelf"
+                                    class="crafts__img" />
+                            </div>
+                            <div class="crafts__content">
+                                <h3 class="crafts__title">Декор и
+                                    аксессуары</h3>
+                                <p class="crafts__text">
+                                    Винные полки, подставки и другие изделия для
+                                    дома — это отражение вашего вкуса. В
+                                    мастерской я создаю вещи, которые сочетают
+                                    эстетику и функциональность. Каждое изделие
+                                    — от винной полки до ключницы — делаю
+                                    вручную, чтобы оно стало изюминкой вашего
+                                    интерьера.
+                                </p>
+                                <a href class="crafts__button"
+                                    uk-toggle="target: #modal-center">заказать</a>
+                            </div>
+                        </div>
+
+                        <div class="crafts__item">
+                            <div class="crafts__image" id="crafts__img-3">
+                                <img
+                                    src="./src/img/hero/craft_table.jpeg"
+                                    alt="solid_wood_table"
+                                    class="crafts__img" />
+                            </div>
+                            <div class="crafts__content" id="crafts__content-3">
+                                <h3 class="crafts__title">Столы из массива</h3>
+                                <p class="crafts__text">
+                                    Прочные и стильные столы ручной работы
+                                    создаются с учётом пожеланий заказчика. Я
+                                    использую качественные материалы и
+                                    проверенные техники, чтобы каждый стол
+                                    служил долго и радовал глаз.
+                                </p>
+                                <a
+                                    href
+                                    class="crafts__button"
+                                    uk-toggle="target: #modal-center">заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="gallery" id="gallery">
+                <div class="container">
+                    <h2 class="title title-h2">Наши работы</h2>
+                    <div class="swiper gallery__swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide gallery__slide">
+                                <a
+                                    href="https://i.ibb.co/YTZsNx6n/IMG-20230824-122003-050-min.jpg"
+                                    data-lightbox="gallery"
+                                    data-title="Разделочная доска из массива дуба с рукояткой"><img
+                                        class="gallery__img"
+                                        src="https://i.ibb.co/YTZsNx6n/IMG-20230824-122003-050-min.jpg"
+                                        alt="Разделочная доска из массива дуба с рукояткой - ручная работа" /></a>
+                            </div>
+                            <div class="swiper-slide gallery__slide">
+                                <a
+                                    href="https://i.ibb.co/Ftgsqf5/IMG-20220724-231635-268-min.jpg"
+                                    data-lightbox="gallery"
+                                    data-title="Декоративная настенная панель из дерева"><img
+                                        class="gallery__img"
+                                        src="https://i.ibb.co/Ftgsqf5/IMG-20220724-231635-268-min.jpg"
+                                        alt="Декоративная настенная панель из массива - авторский дизайн" /></a>
+                            </div>
+                            <div class="swiper-slide gallery__slide">
+                                <a
+                                    href="https://i.ibb.co/PzFznjbj/20230812-095451-01-min.jpg"
+                                    data-lightbox="gallery"
+                                    data-title="Обеденный стол из массива дерева"><img
+                                        class="gallery__img"
+                                        src="https://i.ibb.co/PzFznjbj/20230812-095451-01-min.jpg"
+                                        alt="Обеденный стол из цельного массива дерева - столярное изделие" /></a>
+                            </div>
+                            <div class="swiper-slide gallery__slide">
+                                <a
+                                    href="https://i.ibb.co/YT14gyDN/20231205-095411-01-min.jpg"
+                                    data-lightbox="gallery"
+                                    data-title="Мозаичное панно из дерева"><img
+                                        class="gallery__img"
+                                        src="https://i.ibb.co/YT14gyDN/20231205-095411-01-min.jpg"
+                                        alt="Мозаичное панно из натурального дерева - декоративный элемент интерьера" /></a>
+                            </div>
+                            <div class="swiper-slide gallery__slide">
+                                <a
+                                    href="https://i.ibb.co/bgbhVXZy/20250330-163827-min.jpg"
+                                    data-lightbox="gallery"
+                                    data-title="Журнальный столик из массива"><img
+                                        class="gallery__img"
+                                        src="https://i.ibb.co/bgbhVXZy/20250330-163827-min.jpg"
+                                        alt="Дизайнерский журнальный столик из массива дерева - мебель ручной работы" /></a>
+                            </div>
+                            <div class="swiper-slide gallery__slide">
+                                <a
+                                    href="https://i.ibb.co/6cZFdN16/20250129-122402-min.jpg"
+                                    data-lightbox="gallery"
+                                    data-title="Винный стеллаж из дерева"><img
+                                        class="gallery__img"
+                                        src="https://i.ibb.co/6cZFdN16/20250129-122402-min.jpg"
+                                        alt="Винный стеллаж из натурального дерева - авторская мебель" /></a>
+                            </div>
+                            <div class="swiper-slide gallery__slide">
+                                <a
+                                    href="https://i.ibb.co/gMGt2h9H/IMG-20250418-WA0031-min.jpg"
+                                    data-lightbox="gallery"
+                                    data-title="Кухонный гарнитур из массива"><img
+                                        class="gallery__img"
+                                        src="https://i.ibb.co/gMGt2h9H/IMG-20250418-WA0031-min.jpg"
+                                        alt="Кухонный гарнитур из массива дерева - столярные изделия на заказ" /></a>
+                            </div>
+                            <div class="swiper-slide gallery__slide">
+                                <a
+                                    href="https://i.ibb.co/QFSNPjNr/20250411-113403-1-min.jpg"
+                                    data-lightbox="gallery"
+                                    data-title="Деревянная полка для книг"><img
+                                        class="gallery__img"
+                                        src="https://i.ibb.co/QFSNPjNr/20250411-113403-1-min.jpg"
+                                        alt="Книжная полка из массива дерева - авторская мебель ручной работы" /></a>
+                            </div>
+                            <div class="swiper-slide gallery__slide">
+                                <a
+                                    href="https://i.ibb.co/39w1mKX5/Screenshot-20250202-164851-Whats-App-Business-min.jpg"
+                                    data-lightbox="gallery"
+                                    data-title="Обеденный стол со стульями"><img
+                                        class="gallery__img"
+                                        src="https://i.ibb.co/39w1mKX5/Screenshot-20250202-164851-Whats-App-Business-min.jpg"
+                                        alt="Комплект мебели: обеденный стол и стулья из массива дерева" /></a>
+                            </div>
+                            <div class="swiper-slide gallery__slide">
+                                <a
+                                    href="https://i.ibb.co/HD3gSFcw/IMG-20250204-WA0036-min.jpg"
+                                    data-lightbox="gallery"
+                                    data-title="Декоративная перегородка из дерева"><img
+                                        class="gallery__img"
+                                        src="https://i.ibb.co/HD3gSFcw/IMG-20250204-WA0036-min.jpg"
+                                        alt="Декоративная перегородка из массива - дизайнерский элемент интерьера" /></a>
+                            </div>
+                            <div class="swiper-slide gallery__slide">
+                                <a
+                                    href="https://i.ibb.co/J6JrChY/20240810-173336-min.jpg"
+                                    data-lightbox="gallery"
+                                    data-title="Прикроватная тумба из массива"><img
+                                        class="gallery__img"
+                                        src="https://i.ibb.co/J6JrChY/20240810-173336-min.jpg"
+                                        alt="Прикроватная тумба из натурального дерева - мебель ручной работы" /></a>
+                            </div>
+                            <div class="swiper-slide gallery__slide">
+                                <a
+                                    href="https://i.ibb.co/bMfhJ7fn/20221026-121111-01-min.jpg"
+                                    data-lightbox="gallery"
+                                    data-title="Винная полка из массива дерева"><img
+                                        class="gallery__img"
+                                        src="https://i.ibb.co/bMfhJ7fn/20221026-121111-01-min.jpg"
+                                        alt="Настенная винная полка из массива - авторское изделие ручной работы" /></a>
+                            </div>
+                        </div>
+                        <div class="button-prev"><?xml version="1.0"
+                            standalone="no"?>
+                            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+                            <svg version="1.0"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="50px" height="50px"
+                                viewBox="0 0 512.000000 512.000000"
+                                preserveAspectRatio="xMidYMid meet">
+
+                                <g
+                                    transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+                                    fill="#000" stroke="none">
+                                    <path
+                                        d="M2315 5109 c-800 -83 -1501 -518 -1927 -1196 -604 -961 -490 -2237
+274 -3068 425 -462 951 -737 1583 -827 119 -17 512 -16 635 1 622 86 1148 360
+1572 820 349 378 572 861 650 1406 17 118 17 512 0 630 -59 416 -191 769 -410
+1099 -92 140 -185 254 -315 385 -399 404 -893 653 -1462 737 -123 18 -478 26
+-600 13z m732 -1469 c82 -50 102 -170 40 -239 -12 -13 -230 -206 -484 -428
+-255 -223 -463 -409 -463 -413 0 -4 208 -190 463 -413 254 -222 472 -415 484
+-428 62 -69 42 -189 -40 -239 -42 -26 -121 -26 -162 -1 -52 32 -1119 971
+-1139 1002 -11 19 -18 48 -18 79 0 31 7 60 18 79 20 31 1087 970 1139 1002 41
+25 120 25 162 -1z" />
+                                </g>
+                            </svg></div>
+                        <div class="button-next"><?xml version="1.0"
+                            standalone="no"?>
+                            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+                            <svg version="1.0"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="50px" height="50px"
+                                viewBox="0 0 512.000000 512.000000"
+                                preserveAspectRatio="xMidYMid meet">
+
+                                <g
+                                    transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+                                    fill="#000000" stroke="none">
+                                    <path
+                                        d="M2315 5109 c-800 -83 -1501 -518 -1927 -1196 -604 -961 -490 -2237
+274 -3068 425 -462 951 -737 1583 -827 119 -17 512 -16 635 1 622 86 1148 360
+1572 820 349 378 572 861 650 1406 17 118 17 512 0 630 -59 416 -191 769 -410
+1099 -92 140 -185 254 -315 385 -399 404 -893 653 -1462 737 -123 18 -478 26
+-600 13z m-80 -1468 c52 -32 1119 -971 1139 -1002 24 -39 24 -119 0 -158 -20
+-31 -1087 -970 -1139 -1002 -41 -25 -120 -25 -162 1 -82 50 -102 170 -40 239
+12 13 230 205 485 428 254 223 462 409 462 413 0 4 -210 192 -467 417 -258
+226 -475 419 -485 429 -40 47 -42 131 -3 191 40 61 147 83 210 44z" />
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="benefits">
+                <div class="container">
+                    <h2 class="title title-h2">Почему стоит заказать у нас?</h2>
+
+                    <ul uk-accordion class="benefits__accordion">
+                        <li class="benefits__item">
+                            <a
+                                class="uk-accordion-title benefits__title"
+                                href="#"><span class="benefits__no-wrap">Мы — не
+                                    магазин.</span>
+                                <span class="benefits__no-wrap">Мы —
+                                    мастерская</span></a>
+                            <div class="uk-accordion-content benefits__content">
+                                <p>
+                                    В столярной мастерской <span
+                                        class="logo_color">Tatwood</span> мы
+                                    создаём не просто мебель, а уникальные
+                                    изделия из массива, которые невозможно найти
+                                    в обычных магазинах. Наша работа — это
+                                    индивидуальный подход, внимание к деталям и
+                                    настоящая любовь к дереву. Мы делаем всё,
+                                    что можно изготовить вручную: от столов и
+                                    стульев до подвесных полок и винных
+                                    стеллажей.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="benefits__item">
+                            <a
+                                class="uk-accordion-title benefits__title"
+                                href="#">Натуральное. Родное. Настоящее.</a>
+                            <div class="uk-accordion-content benefits__content">
+                                <p>
+                                    Мы выбираем натуральную древесину — дуб,
+                                    ясень, бук, сосну и берёзу. Это благородные
+                                    породы, проверенные временем, славящиеся
+                                    своей прочностью, красотой и долговечностью.
+                                    Каждое дерево впитывает в себя дыхание
+                                    природы: тепло земли, свежесть воздуха, силу
+                                    дождя и солнца. Благодаря природной текстуре
+                                    и характеру древесины каждое изделие
+                                    получается по-настоящему уникальным — со
+                                    своим неповторимым рисунком, оттенком и
+                                    настроением.
+
+                                    Мы не используем искусственные материалы.
+                                    Только живое дерево — тёплое, родное,
+                                    настоящее.
+
+                                    По желанию возможны изделия из экзотических
+                                    пород древесины — для тех, кто ищет
+                                    особенную эстетику и характер.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="benefits__item">
+                            <a
+                                class="uk-accordion-title benefits__title"
+                                href="#">Индивидуальный подход</a>
+                            <div class="uk-accordion-content benefits__content">
+                                <p>
+                                    Мы изготавливаем изделия по вашим размерам,
+                                    под стиль вашего интерьера и учитываем любые
+                                    пожелания. Это не шаблонная мебель, а
+                                    предмет, созданный специально для вас: от
+                                    нестандартной формы до выбора породы дерева.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="benefits__item">
+                            <a
+                                class="uk-accordion-title benefits__title"
+                                href="#">Детали, которые важны</a>
+                            <div class="uk-accordion-content benefits__content">
+                                <p>
+                                    Наши изделия не только красивые, но и
+                                    долговечные — то, что можно передавать из
+                                    поколения в поколение.
+
+                                    Мы подходим к каждому заказу индивидуально и
+                                    с вниманием к деталям. Чтобы рассчитать
+                                    стоимость и сроки изготовления, нам
+                                    необходима следующая информация:
+                                    — фото или эскиз изделия (можно от руки);
+                                    — желаемая порода дерева (дуб, ясень, бук,
+                                    сосна, берёза);
+                                    — размеры;
+                                    — нужна ли покраска;
+                                    — желаемые сроки (срочно или в стандартные
+                                    сроки).
+
+                                    Чем подробнее будет описание, тем точнее мы
+                                    сможем рассчитать стоимость и воплотить
+                                    именно то, что вы представляете.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="benefits__item">
+                            <a
+                                class="uk-accordion-title benefits__title"
+                                href="#">Ручная работа и душа мастера</a>
+                            <div class="uk-accordion-content benefits__content">
+                                <p>
+                                    В каждый проект вкладывается труд, время и
+                                    душа. Мы не гонимся за массовостью — нам
+                                    важно создать вещь, которая принесёт радость
+                                    именно вам и будет служить долгие годы.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <div class="container">
+                <div
+                    class="uk-height-medium uk-background-cover uk-light uk-flex parallax"
+                    style="background-image: url('/src/img/bg.jpeg');"
+                    uk-parallax="bgy: 500">
+                    <h2
+                        class="title title-h2 parallax__title">Сделано
+                        с
+                        любовью</h2>
+                </div>
+            </div>
+            <section class="partners">
+                <div class="container">
+                    <h2 class="title title-h2">Нам доверяют</h2>
+
+                    <div class="swiper partners__swiper">
+                        <div class="swiper-wrapper">
+                            <div class="partners__item swiper-slide">
+                                <img src="/src/img/partners/tatmak.png"
+                                    alt="tatmak" />
+                            </div>
+                            <div class="partners__item swiper-slide">
+                                <img src="/src/img/partners/azbuka.png"
+                                    alt="partner-2" />
+                            </div>
+                            <div class="partners__item swiper-slide">
+                                <img src="/src/img/partners/giviko.png"
+                                    alt="giviko" />
+                            </div>
+                            <div class="partners__item swiper-slide">
+                                <img src="/src/img/partners/peperoni.webp"
+                                    alt="peperoni" />
+                            </div>
+                            <div class="partners__item swiper-slide">
+                                <img src="/src/img/partners/propar.svg"
+                                    alt="sushi" />
+                            </div>
+                            <div class="partners__item swiper-slide">
+                                <img src="/src/img/partners/umai.png"
+                                    alt="umai" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contacts" id="contacts">
+                <div class="contacts__container container">
+                    <div class="contacts__wrap">
+                        <form class="contacts__form"
+                            action="./php/send.php"
+                            method="post">
+                            <fieldset class="contacts__fieldset">
+                                <legend
+                                    class="contacts__title title title-h2">Обратная
+                                    связь</legend>
+
+                                <div class="contacts__wrapper">
+                                    <div class="contacts__field">
+                                        <input class="contacts__input"
+                                            type="text" id="modal-name"
+                                            name="name"
+                                            placeholder="Иван"
+                                            required>
+                                        <label class="contacts__label"
+                                            for="modal-name">*Имя:</label>
+                                    </div>
+
+                                    <div class="contacts__field">
+                                        <input class="contacts__input"
+                                            type="tel" id="modal-phone"
+                                            name="phone"
+                                            placeholder="+7 (___) ___-__-__"
+                                            required>
+                                        <label class="contacts__label"
+                                            for="modal-phone">*Телефон:</label>
+                                    </div>
+
+                                    <div class="contacts__field">
+                                        <input class="contacts__input"
+                                            type="text" id="modal-telegram"
+                                            name="telegram"
+                                            placeholder="@username"
+                                            pattern="^@?[a-zA-Z0-9_]{5,32}$">
+                                        <label class="contacts__label"
+                                            for="modal-telegram">Telegram:</label>
+                                    </div>
+
+                                </div>
+
+                                <div
+                                    class="contacts__field contacts__field-textarea">
+                                    <textarea
+                                        class="contacts__input contacts__input-textarea"
+                                        name="message" id="modal-message-index"
+                                        placeholder=" "
+                                        rows="4"></textarea>
+                                    <label
+                                        class="contacts__label contacts__label-textarea"
+                                        for="modal-message-index">Комментарий
+                                    </label>
+                                </div>
+
+                                <button class="contacts__button btn"
+                                    type="submit">Отправить</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact-links">
+                <div class="container">
+                    <h2 class="title title-h2">Вы также можете написать
+                        нам напрямую</h2>
+                    <div class="contact-links__items">
+                        <div class="contact-links__item-wrapper">
+                            <a href="https://t.me/YuA1202"
+                                target="_blank"
+                                class="contact-links__item contact-links__item--tg">
+                                <i
+                                    class="icon-telegram contact-links__icon"></i>
+                            </a>
+                            <span
+                                class="contact-links__label">Telegram</span>
+                        </div>
+                        <div class="contact-links__item-wrapper">
+                            <a href="https://wa.me/79179055577"
+                                target="_blank"
+                                class="contact-links__item contact-links__item--wa">
+                                <i
+                                    class="icon-whatsapp contact-links__icon"></i>
+                            </a>
+                            <span
+                                class="contact-links__label">WhatsApp</span>
+                        </div>
+                        <div class="contact-links__item-wrapper">
+                            <a href="https://vk.com/public212817024"
+                                target="_blank"
+                                class="contact-links__item contact-links__item--vk">
+                                <i
+                                    class="icon-vkontakte contact-links__icon"></i>
+                            </a>
+                            <span class="contact-links__label">VK</span>
+                        </div>
+                        <div class="contact-links__item-wrapper">
+                            <a href="https://www.instagram.com/tat_wood_shop_"
+                                target="_blank"
+                                class="contact-links__item contact-links__item--insta">
+                                <i
+                                    class="icon-instagram contact-links__icon"></i>
+                            </a>
+                            <span
+                                class="contact-links__label">Instagram</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="site-footer uk-section uk-text-center">
+                <p>&copy; 2025 Ручная работа из массива. Все права защищены.</p>
+                <p>Сайт разработан с любовью <a
+                        href="https://t.me/martiokhoras"
+                        target="_blank">Excelsio</a></p>
+            </footer>
+        </main>
+
+        <!-- Модальное окно -->
+
+        <div id="modal-center" class="uk-flex-top contact-modal"
+            uk-modal>
+            <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+                <button class="uk-modal-close-default" type="button"
+                    uk-close></button>
+
+                <section class="contacts">
+                    <div class="contacts__container container">
+                        <div class="contacts__wrap">
+                            <form class="contacts__form"
+                                action="./php/send.php"
+                                method="post">
+                                <fieldset class="contacts__fieldset">
+                                    <legend
+                                        class="contacts__title title title-h2">Обратная
+                                        связь</legend>
+                                    <div class="contacts__wrapper">
+                                        <div class="contacts__field">
+                                            <input class="contacts__input"
+                                                type="text" id="modal-name"
+                                                name="name"
+                                                placeholder="Иван"
+                                                required>
+                                            <label class="contacts__label"
+                                                for="modal-name">*Имя:</label>
+                                        </div>
+
+                                        <div class="contacts__field">
+                                            <input class="contacts__input"
+                                                type="tel" id="modal-phone"
+                                                name="phone"
+                                                placeholder="+7 (___) ___-__-__"
+                                                required>
+                                            <label class="contacts__label"
+                                                for="modal-phone">*Телефон:</label>
+                                        </div>
+
+                                        <div class="contacts__field">
+                                            <input class="contacts__input"
+                                                type="text" id="modal-telegram"
+                                                name="telegram"
+                                                placeholder="@username"
+                                                pattern="^@?[a-zA-Z0-9_]{5,32}$">
+                                            <label class="contacts__label"
+                                                for="modal-telegram">Telegram:</label>
+                                        </div>
+
+                                    </div>
+                                    <div
+                                        class="contacts__field contacts__field-textarea">
+                                        <textarea
+                                            class="contacts__input contacts__input-textarea"
+                                            name="message"
+                                            id="modal-message-index"
+                                            rows="4"></textarea>
+                                        <label
+                                            class="contacts__label contacts__label-textarea"
+                                            for="modal-message-index">Комментарий</label>
+                                    </div>
+                                    <button class="contacts__button btn"
+                                        type="submit">Отправить</button>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="contact-links">
+                    <div class="container">
+                        <h2 class="title title-h2">Вы также можете написать
+                            нам напрямую</h2>
+                        <div class="contact-links__items">
+                            <div class="contact-links__item-wrapper">
+                                <a href="https://t.me/твой_ник"
+                                    target="_blank"
+                                    class="contact-links__item contact-links__item--tg">
+                                    <i
+                                        class="icon-telegram contact-links__icon"></i>
+                                </a>
+                                <span
+                                    class="contact-links__label">Telegram</span>
+                            </div>
+                            <div class="contact-links__item-wrapper">
+                                <a href="https://wa.me/79179055577"
+                                    target="_blank"
+                                    class="contact-links__item contact-links__item--wa">
+                                    <i
+                                        class="icon-whatsapp contact-links__icon"></i>
+                                </a>
+                                <span
+                                    class="contact-links__label">WhatsApp</span>
+                            </div>
+                            <div class="contact-links__item-wrapper">
+                                <a href="https://vk.com/public212817024"
+                                    target="_blank"
+                                    class="contact-links__item contact-links__item--vk">
+                                    <i
+                                        class="icon-vkontakte contact-links__icon"></i>
+                                </a>
+                                <span class="contact-links__label">VK</span>
+                            </div>
+
+                            <div class="contact-links__item-wrapper">
+                                <a
+                                    href="https://www.instagram.com/tat_wood_"
+                                    target="_blank"
+                                    class="contact-links__item contact-links__item--insta">
+                                    <i
+                                        class="icon-instagram contact-links__icon"></i>
+                                </a>
+                                <span
+                                    class="contact-links__label">Instagram</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+        <script src="./src/js/libs/jquery.min.js"></script>
+        <script src="./src/js/libs/inputmask.min.js"></script>
+        <script src="./src/js/script.js"></script>
+        <script type="module" src="./src/js/form.js"></script>
+    </body>
+</html>

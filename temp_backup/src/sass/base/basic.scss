@@ -1,0 +1,68 @@
+@use "/src/sass/base/variables.scss" as *;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+figure,
+p,
+ol,
+ul {
+    margin: 0;
+}
+
+ol[role="list"],
+ul[role="list"] {
+    list-style: none;
+    padding-inline: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: "Playfair Display", serif;
+}
+
+p,
+ol,
+ul,
+figure {
+    font-family: "Manrope", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+    display: block;
+    max-inline-size: 100%;
+}
+
+html {
+    font-family: "Manrope", sans-serif;
+    scroll-behavior: smooth;
+}
+
+// Reset link styles
+a {
+    text-decoration: none;
+    color: $light;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:visited {
+        color: $light;
+        text-decoration: none;
+    }
+}
+
+.logo_color {
+    color: $light-hover-2;
+    font-weight: 700;
+    text-transform: uppercase;
+}

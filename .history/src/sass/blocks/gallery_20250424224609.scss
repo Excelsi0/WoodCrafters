@@ -1,0 +1,177 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
+
+.gallery {
+    margin-top: 150px;
+    &__wrap {
+        padding: 30px;
+        background-color: $graphite-dark;
+        border-radius: $my-border-radius;
+        box-shadow: 0 0 10px 0px $graphite;
+    }
+    &-page {
+        margin-top: 70px;
+        @include breakpoint(mobile-lg) {
+            margin-top: 70px;
+        }
+        @include breakpoint(mobile) {
+            margin-top: 50px;
+        }
+    }
+    @include breakpoint(mobile-lg) {
+        margin-top: 100px;
+    }
+    @include breakpoint(mobile) {
+        margin-top: 70px;
+    }
+    &__swiper {
+        margin-top: 70px;
+        @include breakpoint(mobile-lg) {
+            margin-top: 50px;
+        }
+        @include breakpoint(mobile) {
+            margin-top: 25px;
+        }
+        &-page {
+            margin-top: 40px;
+            @include breakpoint(mobile-lg) {
+                margin-top: 30px;
+            }
+            @include breakpoint(mobile) {
+                margin-top: 25px;
+            }
+        }
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: $graphite-dark;
+        font-size: 1px;
+        background-color: $light;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-tap-highlight-color: transparent;
+        outline: none;
+    }
+
+    &__slide {
+        width: 100%;
+        height: 400px;
+        padding-bottom: 45px;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: $my-border-radius;
+    }
+    @include breakpoint(mobile-lg) {
+        .swiper-button-prev {
+            display: none;
+        }
+        .swiper-button-next {
+            display: none;
+        }
+    }
+    .swiper-pagination {
+        bottom: 0;
+    }
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        background-color: $light;
+        opacity: 1;
+        -webkit-tap-highlight-color: transparent;
+    }
+    .swiper-pagination-bullet-active {
+        transform: scale(1.5);
+        background-color: $light-hover-2;
+    }
+
+    .button-prev,
+    .button-next {
+        cursor: pointer;
+        fill: $light;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-100%);
+        z-index: 10;
+        box-shadow: 0 0 10px 0px $graphite;
+        transition: box-shadow 0.3s linear;
+        -webkit-tap-highlight-color: transparent;
+        outline: none;
+        @include not-hover-mobile {
+            &:hover {
+                box-shadow: 0 0 10px 10px $graphite-dark;
+            }
+        }
+
+        g {
+            fill: $light;
+            transition: fill 0.3s linear;
+            @include not-hover-mobile {
+                &:hover {
+                    fill: $light-hover-2;
+                }
+                &:active {
+                    fill: $light-hover;
+                }
+            }
+        }
+    }
+    .button-prev {
+        left: 10px;
+    }
+    .button-next {
+        right: 10px;
+    }
+    @include breakpoint(mobile-lg) {
+        .button-prev,
+        .button-next {
+            display: none;
+            g {
+                display: none;
+            }
+        }
+    }
+}
+
+.lb-outerContainer {
+    background-color: $graphite-dark;
+}
+
+.gallery__button-container {
+    display: flex;
+    justify-content: end;
+    @include breakpoint(tablet) {
+        margin-top: 30px;
+        justify-content: center;
+    }
+}
+.gallery__button {
+    margin-top: 0;
+    font-size: 32px;
+}
+
+.gallery-page {
+    &__text {
+        margin-top: 24px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 1.4;
+        color: $light;
+        &__price {
+            font-size: 30px;
+            line-height: 1.4;
+            color: $light-hover-2;
+        }
+    }
+}

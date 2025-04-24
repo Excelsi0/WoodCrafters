@@ -1,0 +1,37 @@
+@use "/src/sass/base/variables" as *;
+@use "/src/sass/base/mixins" as *;
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+    transition: all 0.2s linear;
+
+    background-color: $graphite-light;
+    border-radius: $my-border-radius;
+    color: $light;
+    font-weight: 300;
+    font-size: 28px;
+}
+
+@include breakpoint(tablet-lg) {
+    .btn {
+        font-size: 20px;
+    }
+}
+
+@include not-hover-mobile {
+    .btn {
+        &:hover {
+            transform: scale(1.01);
+            box-shadow: 0 0 40px 25px #0000004d;
+            text-shadow: 0 0 10px $light-hover;
+            background-color: $light-hover;
+        }
+        &:active {
+            transform: scale(0.99);
+            box-shadow: 0 0 20px 10px #0000004d;
+        }
+    }
+}

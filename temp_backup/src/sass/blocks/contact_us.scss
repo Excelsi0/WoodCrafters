@@ -1,0 +1,83 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
+
+.contact-links {
+    margin-top: 30px;
+
+    &__items {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    &__item-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        text-decoration: none;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        &--tg {
+            background-color: #229ed9;
+            width: 40px;
+            height: 40px;
+
+            &:hover {
+                background-color: rgb(15, 127, 255);
+            }
+        }
+
+        &--wa {
+            background-color: #25d366;
+            &:hover {
+                background-color: #16ff6b;
+            }
+        }
+
+        &--vk {
+            background-color: #45668e;
+            &:hover {
+                background-color: #0077ff;
+            }
+        }
+
+        &--insta {
+            background-color: #e1306c;
+            &:hover {
+                background-color: #ff067e;
+            }
+        }
+    }
+
+    &__icon {
+        font-size: 20px;
+        color: #fff;
+    }
+
+    &__label {
+        font-size: 12px;
+        color: #fff;
+        opacity: 0.8;
+        top: 0;
+    }
+
+    @include breakpoint(mobile-lg) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
