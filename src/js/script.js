@@ -169,25 +169,32 @@ try {
 }
 
 // Telegram
-const tgInput = document.getElementById("telegram");
-tgInput.addEventListener("input", function () {
-    if (!this.value.startsWith("@")) {
-        this.value = "@" + this.value.replace(/^@+/, "");
-    }
+const tgInputs = document.querySelectorAll(
+    "#telegram, #modal-telegram, #modal-telegram-gallery",
+);
+tgInputs.forEach((input) => {
+    input.addEventListener("input", function () {
+        if (!this.value.startsWith("@")) {
+            this.value = "@" + this.value.replace(/^@+/, "");
+        }
+    });
 });
 
 // Телефон
-const phoneInput = document.getElementById("phone");
-
-Inputmask({
-    mask: "+7 (999) 999-99-99",
-    showMaskOnHover: false,
-    showMaskOnFocus: true,
-    clearIncomplete: true,
-    autoUnmask: false,
-    placeholder: "_",
-    onBeforePaste: function (pastedValue, opts) {
-        // удаляем всё лишнее при вставке
-        return pastedValue.replace(/^8/, "").replace(/\D/g, "");
-    },
-}).mask(phoneInput);
+const phoneInputs = document.querySelectorAll(
+    "#phone, #modal-phone, #modal-phone-gallery",
+);
+phoneInputs.forEach((input) => {
+    Inputmask({
+        mask: "+7 (999) 999-99-99",
+        showMaskOnHover: false,
+        showMaskOnFocus: true,
+        clearIncomplete: true,
+        autoUnmask: false,
+        placeholder: "_",
+        onBeforePaste: function (pastedValue, opts) {
+            // удаляем всё лишнее при вставке
+            return pastedValue.replace(/^8/, "").replace(/\D/g, "");
+        },
+    }).mask(input);
+});

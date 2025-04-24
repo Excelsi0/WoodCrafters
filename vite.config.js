@@ -8,17 +8,30 @@ import { execSync } from "child_process";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
-    base: "./",
+    base: "/",
     build: {
         rollupOptions: {
             input: {
                 main: resolve(__dirname, "index.html"),
+                about: resolve(__dirname, "about.html"),
+                gallery: resolve(__dirname, "gallery.html"),
+                contacts: resolve(__dirname, "contacts.html"),
             },
         },
         assetsDir: "assets",
         emptyOutDir: true,
+        outDir: "dist",
+    },
+    server: {
+        proxy: {
+            "/php/send.php": {
+                target: "http://localhost:8000",
+                changeOrigin: true,
+            },
+        },
     },
     css: {
+        devSourcemap: true,
         postcss: {
             plugins: [
                 postcssPresetEnv(),
@@ -35,10 +48,22 @@ export default defineConfig({
             name: "copy-files",
             closeBundle() {
                 try {
-                    // Копируем send.php из src в dist
-                    execSync("cp src/send.php dist/");
-                    // Копируем .env из корня в dist
-                    execSync("cp .env dist/");
+                    // Создаем необходимые директории
+                    execSync("mkdir -p dist/php");
+                    execSync("mkdir -p dist/js");
+
+                    // Копируем PHP файлы
+                    execSync("cp src/send.php dist/php/");
+                    execSync("cp phone_validation.php dist/php/");
+
+                    // Копируем .env в php директорию
+                    execSync("cp .env dist/php/");
+
+                    // Копируем JS файлы в dist/js
+                    execSync("cp src/js/form.js dist/js/");
+                    execSync("cp src/js/script.js dist/js/");
+                    execSync("cp src/js/menu.js dist/js/");
+
                     console.log("Файлы успешно скопированы в dist");
                 } catch (error) {
                     console.error("Ошибка при копировании файлов:", error);
