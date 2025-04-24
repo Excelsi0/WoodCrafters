@@ -183,7 +183,7 @@
 }
 
 @include breakpoint(mobile-lg) {
-    .crafts__item:nth-child(even) {
+    .about__item:nth-child(even) {
         .crafts__title,
         .crafts__text,
         .crafts__button {
