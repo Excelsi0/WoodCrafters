@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description"
+            content="Контакты мастерской Tatwood - как связаться с мастером, адрес и телефон." />
+        <meta name="keywords"
+            content="контакты мастерской Tatwood, столярная мастерская, Дамир Ильясов, адрес и телефон" />
+        <meta name="author" content="Tatwood" />
+        <meta property="og:title"
+            content="Контакты мастерской Tatwood - как связаться с мастером, адрес и телефон" />
+        <meta property="og:description"
+            content="Узнайте больше о нашей мастерской, принципах работы и мастере Дамире Ильясове" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://tat-wood.ru/contacts.html" />
+        <meta property="og:image" content="/src/img/logo/logo.svg" />
+
+        <title>Контакты мастерской Tatwood - как связаться с мастером, адрес и
+            телефон</title>
+
+        <!-- !FAVICON -->
+        <link rel="apple-touch-icon" sizes="180x180"
+            href="./src/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32"
+            href="./src/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16"
+            href="./src/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="./src/favicon/site.webmanifest" />
+
+        <!-- !FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
+            rel="stylesheet" />
+        <script type="module" src="./src/js/script.js"></script>
+        <script type="module" src="./src/js/menu.js"></script>
+    </head>
+    <body>
+        <main>
+            <section class="hero" style="background-image: none;">
+                <div class="container">
+                    <nav class="nav">
+                        <div class="nav__left">
+                            <a href="index.html" class="logo">
+                                <fieldset class="logo__border">
+                                    <legend>
+                                        <img class="logo__img"
+                                            src="/src/logo/logo.svg"
+                                            alt="Логотип Tatwood" />
+                                    </legend>
+                                    <h2 class="logo__text">
+                                        Tatwood&nbsp;
+                                        <span>мастерская Дамира Ильясова</span>
+                                    </h2>
+                                </fieldset>
+                            </a>
+                        </div>
+                        <div class="nav__right">
+                            <a href="/" class="nav__link">Главная</a>
+                            <a href="/about" class="nav__link">О нас</a>
+                            <a href="/gallery" class="nav__link">Галерея</a>
+                            <a href="/contacts" class="nav__link">Контакты</a>
+                        </div>
+                    </nav>
+                </div>
+            </section>
+            <section class="contacts" id="contacts">
+                <div class="contacts__container container">
+                    <div class="contacts__wrap">
+                        <form class="contacts__form" action="send.php"
+                            method="post">
+                            <fieldset class="contacts__fieldset">
+                                <legend
+                                    class="contacts__title title title-h2">Обратная
+                                    связь</legend>
+
+                                <div class="contacts__wrapper">
+                                    <div class="contacts__field">
+                                        <input class="contacts__input"
+                                            type="text" id="name"
+                                            name="name"
+                                            placeholder="Иван"
+                                            required>
+                                        <label class="contacts__label"
+                                            for="phone">*Имя:</label>
+                                    </div>
+
+                                    <div class="contacts__field">
+                                        <input class="contacts__input"
+                                            type="tel" id="phone"
+                                            name="phone"
+                                            placeholder="+7 (___) ___-__-__"
+                                            required>
+                                        <label class="contacts__label"
+                                            for="phone">*Телефон:</label>
+                                    </div>
+
+                                    <div class="contacts__field">
+                                        <input class="contacts__input"
+                                            type="text" id="telegram"
+                                            name="telegram"
+                                            placeholder="@username"
+                                            pattern="^@?[a-zA-Z0-9_]{5,32}$">
+                                        <label class="contacts__label"
+                                            for="telegram">Telegram:</label>
+                                    </div>
+
+                                </div>
+
+                                <div
+                                    class="contacts__field contacts__field-textarea">
+                                    <textarea
+                                        class="contacts__input contacts__input-textarea"
+                                        name="message" id="message"
+                                        placeholder=" "
+                                        rows="4"></textarea>
+                                    <label
+                                        class="contacts__label contacts__label-textarea"
+                                        for="message">Комментарий
+                                    </label>
+                                </div>
+
+                                <button class="contacts__button btn"
+                                    type="submit">Отправить</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact-links">
+                <div class="container">
+                    <h2 class="title title-h2">Вы также можете написать
+                        нам напрямую</h2>
+                    <div class="contact-links__items">
+                        <div class="contact-links__item-wrapper">
+                            <a href="https://t.me/YuA1202"
+                                target="_blank"
+                                class="contact-links__item contact-links__item--tg">
+                                <i
+                                    class="icon-telegram contact-links__icon"></i>
+                            </a>
+                            <span
+                                class="contact-links__label">Telegram</span>
+                        </div>
+                        <div class="contact-links__item-wrapper">
+                            <a href="https://wa.me/79179055577"
+                                target="_blank"
+                                class="contact-links__item contact-links__item--wa">
+                                <i
+                                    class="icon-whatsapp contact-links__icon"></i>
+                            </a>
+                            <span
+                                class="contact-links__label">WhatsApp</span>
+                        </div>
+                        <div class="contact-links__item-wrapper">
+                            <a href="https://vk.com/public212817024"
+                                target="_blank"
+                                class="contact-links__item contact-links__item--vk">
+                                <i
+                                    class="icon-vkontakte contact-links__icon"></i>
+                            </a>
+                            <span class="contact-links__label">VK</span>
+                        </div>
+                        <div class="contact-links__item-wrapper">
+                            <a href="https://www.instagram.com/tat_wood_shop_"
+                                target="_blank"
+                                class="contact-links__item contact-links__item--insta">
+                                <i
+                                    class="icon-instagram contact-links__icon"></i>
+                            </a>
+                            <span
+                                class="contact-links__label">Instagram</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class="site-footer uk-section uk-text-center">
+                <p>&copy; 2025 Ручная работа из массива. Все права защищены.</p>
+                <p>Сайт разработан с любовью <a
+                        href="https://t.me/martiokhoras"
+                        target="_blank">Excelsio</a></p>
+            </footer>
+        </main>
+        <script type="module" src="./src/js/script.js"></script>
+    </body>
+</html>
