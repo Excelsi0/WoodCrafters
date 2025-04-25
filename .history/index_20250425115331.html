@@ -32,18 +32,18 @@
         <link
             rel="apple-touch-icon"
             sizes="180x180"
-            href="/assets/apple-touch-icon-DKTD1Kds.png" />
+            href="./src/favicon/apple-touch-icon.png" />
         <link
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="/assets/favicon-32x32-BWD-jaFB.png" />
+            href="./src/favicon/favicon-32x32.png" />
         <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href="/assets/favicon-16x16-BkF9H6EV.png" />
-        <link rel="manifest" href="/assets/site-BwHFeIBa.webmanifest" />
+            href="./src/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="./src/favicon/site.webmanifest" />
 
         <!-- !FONTS -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -51,6 +51,8 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
             rel="stylesheet" />
+        <script type="module" src="./src/js/script.js"></script>
+        <script type="module" src="./src/js/menu.js"></script>
 
         <!-- Для Twitter -->
         <meta name="twitter:card" content="summary_large_image" />
@@ -60,9 +62,6 @@
             content="Создаем уникальные изделия из массива дерева: мебель, декоративные панели, столы. Ручная работа, индивидуальный подход, натуральные материалы." />
         <meta name="twitter:image"
             content="https://i.ibb.co/M5gtwPN0/20240721-141126-min.jpg" />
-      <script type="module" crossorigin src="/assets/menu-C03tWCR1.js"></script>
-      <script type="module" crossorigin src="/assets/form-C3hD0eTf.js"></script>
-      <link rel="stylesheet" crossorigin href="/assets/menu-CWlY1BVk.css">
     </head>
     <body>
         <main>
@@ -75,7 +74,7 @@
                                     <legend>
                                         <img
                                             class="logo__img"
-                                            src="/assets/logo-0NigBA36.svg"
+                                            src="/src/logo/logo.svg"
                                             alt="Логотип Tatwood - мастерская Дамира Ильясова" />
                                     </legend>
                                     <h2 class="logo__text">
@@ -136,7 +135,7 @@
                     </div>
                 </div>
                 <img
-                    src="/assets/branch_bg-BYGcV3kp.png"
+                    src="./src/img/hero/branch_bg.png"
                     alt="Декоративный элемент - ветвь дерева"
                     class="hero-bg" />
             </section>
@@ -519,7 +518,7 @@
             <div class="container">
                 <div
                     class="uk-height-medium uk-background-cover uk-light uk-flex parallax"
-                    style="background-image: url('/assets/bg-D-o6Khyf.jpeg');"
+                    style="background-image: url('/src/img/bg.jpeg');"
                     uk-parallax="bgy: 500">
                     <h2
                         class="title title-h2 parallax__title">Сделано
@@ -534,27 +533,27 @@
                     <div class="swiper partners__swiper">
                         <div class="swiper-wrapper">
                             <div class="partners__item swiper-slide">
-                                <img src="/assets/tatmak-Bbn-Lxdy.png"
+                                <img src="/src/img/partners/tatmak.png"
                                     alt="Tatmak - партнер мастерской Tatwood в Татарстане" />
                             </div>
                             <div class="partners__item swiper-slide">
-                                <img src="/assets/azbuka-BPb-ptSI.png"
+                                <img src="/src/img/partners/azbuka.png"
                                     alt="Азбука Вкуса - партнер мастерской Tatwood" />
                             </div>
                             <div class="partners__item swiper-slide">
-                                <img src="/assets/giviko-Be0bp1fa.png"
+                                <img src="/src/img/partners/giviko.png"
                                     alt="Giviko - партнер мастерской Tatwood" />
                             </div>
                             <div class="partners__item swiper-slide">
-                                <img src="data:image/webp;base64,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"
+                                <img src="/src/img/partners/peperoni.webp"
                                     alt="Peperoni - ресторан-партнер мастерской Tatwood" />
                             </div>
                             <div class="partners__item swiper-slide">
-                                <img src="/assets/propar-D49Jytij.svg"
+                                <img src="/src/img/partners/propar.svg"
                                     alt="Propar - партнер мастерской Tatwood" />
                             </div>
                             <div class="partners__item swiper-slide">
-                                <img src="/assets/umai-vpPXn2vV.png"
+                                <img src="/src/img/partners/umai.png"
                                     alt="Umai - ресторан-партнер мастерской Tatwood" />
                             </div>
                         </div>
@@ -643,7 +642,7 @@
                                 class="contact-links__label">Telegram</span>
                         </div>
                         <div class="contact-links__item-wrapper">
-                            <a href="https://wa.me/79656140399"
+                            <a href="https://wa.me/79179055577"
                                 target="_blank"
                                 class="contact-links__item contact-links__item--wa">
                                 <i
@@ -759,7 +758,7 @@
                             нам напрямую</h2>
                         <div class="contact-links__items">
                             <div class="contact-links__item-wrapper">
-                                <a href="https://t.me/@YuA1202"
+                                <a href="https://t.me/твой_ник"
                                     target="_blank"
                                     class="contact-links__item contact-links__item--tg">
                                     <i
@@ -769,7 +768,7 @@
                                     class="contact-links__label">Telegram</span>
                             </div>
                             <div class="contact-links__item-wrapper">
-                                <a href="https://wa.me/79656140399"
+                                <a href="https://wa.me/79179055577"
                                     target="_blank"
                                     class="contact-links__item contact-links__item--wa">
                                     <i
@@ -808,5 +807,6 @@
         <script src="./src/js/libs/jquery.min.js"></script>
         <script src="./src/js/libs/inputmask.min.js"></script>
         <script src="./src/js/script.js"></script>
+        <script type="module" src="./src/js/form.js"></script>
     </body>
 </html>
