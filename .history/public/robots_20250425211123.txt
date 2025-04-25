@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tat-wood.ru/sitemap.xml
