@@ -197,11 +197,12 @@
                 white-space: normal;
             }
         }
-    }
-}
-.gallery-page__text-no-wrap-mobile {
-    @include breakpoint(mobile-lg) {
-        white-space: nowrap;
+        &-no-wrap-mobile {
+            white-space: normal;
+            @include breakpoint(mobile-lg) {
+                white-space: nowrap;
+            }
+        }
     }
 }
 
